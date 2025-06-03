@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@theme {
+	--font-gilroy: "Gilroy", sans-serif;
+	--color-Onyx: #111111;
+	--color-Iridium: #3d3d3d;
+	--color-shamrockGreen: #0da34e;
+	--sectionGap: clamp(0.75rem, 4%, 5rem);
+}
+
+h1 {
+	@apply text-[clamp(2rem,calc(3vw+1rem),6rem)] leading-[clamp(2rem,calc(3vw+1rem),6rem)];
+}
+h2 {
+	@apply text-[clamp(1.5rem,calc(2.5vw+1rem),5.25rem)] leading-[clamp(1.65rem,calc(2.5vw+1rem),5rem)];
+}
+h3 {
+	@apply text-[clamp(1.25rem,calc(1.75vw+1rem),3.5rem)] leading-[clamp(1.5rem,calc(1.75vw+1rem),4rem)];
+}
+h4 {
+	@apply text-[clamp(1rem,calc(1.25vw+1rem),2.75rem)] leading-[clamp(1.25rem,calc(1.75vw+0.5rem),3rem)];
+}
+h5 {
+	@apply text-[clamp(1.1rem,calc(1vw+0.5rem),2rem)] leading-[clamp(1.1rem,calc(1vw+0.5rem),2rem)];
+}
+h6 {
+	@apply text-[clamp(.95rem,calc(1vw+0.35rem),1.6rem)] leading-[clamp(1.1rem,calc(1vw+0.4rem),1.75rem)];
+}
+p {
+	@apply text-[clamp(.9rem,calc(1vw+0.2rem),1.5rem)] leading-[clamp(1.1rem,calc(1vw+0.4rem),1.75rem)];
+}
+
+#menu-btn.change span:first-child {
+	@apply translate-y-0.5 -rotate-45;
+}
+#menu-btn.change span:last-child {
+	@apply -translate-y-[3px] rotate-45;
+}
+
+/* Main Menu */
+#main-menu .menu-item a {
+	@apply hidden uppercase text-center text-lg font-semibold py-1.5 border-b-1 border-b-Iridium hover:text-[#808080] xl:block xl:text-start xl:text-base xl:font-medium xl:p-0 xl:border-none;
+}
+#main-menu .menu-item > .sub-menu {
+	@apply xl:pt-5;
+}
+#main-menu .menu-item > .sub-menu .menu-item {
+	@apply xl:overflow-hidden;
+}
+#main-menu .menu-item > .sub-menu a {
+	@apply block relative after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left  xl:inline-block xl:text-sm xl:font-normal xl:py-1.5 xl:hover:text-white;
+}
+
+/* Font Face */
+@font-face {
+	font-family: "Gilroy";
+	src: url("../assets/fonts/Gilroy-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../assets/fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../assets/fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../assets/fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../assets/fonts/Gilroy-Heavy.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
