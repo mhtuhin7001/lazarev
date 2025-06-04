@@ -86,7 +86,7 @@
 				id="main-menu"
 				class="overflow-y-scroll fixed h-full bg-Onyx px-(--sectionGap) top-0 inset-x-0 -translate-y-full xl:overflow-y-hidden xl:w-fit xl:h-fit xl:bg-transparent xl:mx-auto xl:translate-0 xl:pointer-events-none xl:z-50"
 			>
-				<ul class="h-fit xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
+				<ul class="h-fit pt-14 xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
 					<li class="menu-item menu-item-has-children">
 						<a href="">Case Studies</a>
 						<ul class="sub-menu">
@@ -99,7 +99,7 @@
 						<a href="">Areas of Expertise</a>
 						<ul class="sub-menu">
 							<li class="menu-item">
-								<a href="">AI & ML</a>
+								<a href="">🔥AI & ML</a>
 							</li>
 							<li class="menu-item">
 								<a href="">FinTech</a>
@@ -170,15 +170,82 @@
 			</nav>
 			<div
 				id="menu-bg"
-				class="hidden fixed w-full bg-Onyx top-0 xl:inline-block after:content-[''] after:absolute after:h-0.5 after:bg-Iridium after:mx-(--sectionGap) after:bottom-0 after:left-0 after:right-0"
+				class="fixed w-full h-[53px] bg-Onyx top-0 xl:inline-block after:content-[''] after:absolute after:h-[1px] after:bg-white after:mx-(--sectionGap) after:bottom-0 after:left-0 after:right-0 xl:h-20"
 			></div>
 		</header>
 
 		<!-- Hero -->
-		<section class="bg-Onyx h-dvh">
-			<h1
-				class="text-[clamp(2rem,calc(6vw+1rem),9rem)] leading-[clamp(1.5rem,calc(5.5vw+1rem),8rem)]"
-			></h1>
+		<section
+			id="hero-home"
+			class="h-[110dvh] flex flex-col text-center text-white bg-Onyx px-(--sectionGap) justify-center items-center"
+		>
+			<div
+				id="hero-title"
+				class="uppercase text-[clamp(2rem,calc(8vw+1rem),14rem)] leading-[clamp(1.5rem,calc(7vw+1rem),12rem)] font-bold mt-(--sectionGap)"
+			>
+				AI & ML <br class="sm:hidden" />
+				Pr<span
+					class="inline-grid size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] place-items-center bg-shamrockGreen rounded-full"
+					><svg fill="none" viewBox="0 0 131 136">
+						<path
+							data-morph="end"
+							fill="#fff"
+							d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
+						></path>
+						<path
+							data-morph="start"
+							fill="#fff"
+							d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
+							data-original="M65.72 109.14c10.08 0 17.76-3.78 23.04-11.34 5.4-7.68 8.1-17.64 8.1-29.88 0-12.24-2.7-22.2-8.1-29.88-5.28-7.68-12.96-11.52-23.04-11.52-9.96 0-17.7 3.84-23.22 11.52-5.4 7.68-8.1 17.64-8.1 29.88 0 12.12 2.7 22.02 8.1 29.7 5.52 7.68 13.26 11.52 23.22 11.52Zm46.08 7.02c-11.64 12.6-27.06 18.9-46.26 18.9s-34.62-6.3-46.26-18.9C7.76 103.56 2 87.48 2 67.92c0-19.56 5.76-35.64 17.28-48.24C30.92 7.08 46.34.78 65.54.78s34.62 6.3 46.26 18.9c11.64 12.6 17.46 28.68 17.46 48.24 0 19.56-5.82 35.64-17.46 48.24Z"
+						></path></svg></span
+				>duct Design Agency
+			</div>
+			<p class="mx-[10%] mt-(--sectionGap)">
+				We partner with AI & ML businesses, guiding them from series A
+				<br />
+				to series D and beyond with our expertise in <br />
+				<span>brand design</span> <span>user experience</span> and
+				<span>digital product design</span>.
+			</p>
+			<div
+				id="partners"
+				class="justify-self-end overflow-hidden relative mt-(--sectionGap) whitespace-nowrap before:content-[''] before:absolute before:w-1/3 before:h-full before:bg-gradient-to-l before:from-transparent before:to-Onyx before:z-10 before:left-0 after:content-[''] after:absolute after:w-1/3 after:h-full after:bg-gradient-to-r after:from-transparent after:to-Onyx after:z-10 after:right-0 md:w-[50%]"
+			>
+				<div
+					class="partner-logos inline-flex items-center gap-5 me-5 animate-marquee"
+				>
+					<img
+						src="assets/image/partner-1.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+					<img
+						src="assets/image/partner-2.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+					<img
+						src="assets/image/partner-3.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+					<img
+						src="assets/image/partner-4.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+					<img
+						src="assets/image/partner-5.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+					<img
+						src="assets/image/partner-6.svg"
+						class="h-4"
+						alt="Partner Logo"
+					/>
+				</div>
+			</div>
 		</section>
 
 		<section>
