@@ -1,9 +1,23 @@
+// Initialize Lenis
+document.addEventListener("DOMContentLoaded", () => {
+	const lenis = new Lenis({
+		duration: 1.2,
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		smooth: true,
+		smoothTouch: true,
+	});
+	function raf(time) {
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	}
+	requestAnimationFrame(raf);
+});
+
 // Header
 document.addEventListener("DOMContentLoaded", () => {
 	// Common elements
 	const menuBtn = document.getElementById("menu-btn");
 	const mainMenu = document.getElementById("main-menu");
-
 	// Mobile behavior (<= 1280px)
 	if (window.innerWidth <= 1280) {
 		// Menu Button Toggle
@@ -35,10 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Desktop behavior (> 1280px)
 	else {
-		const menuHeight =
-			document.querySelector("#main-menu ul").clientHeight + 10;
+		const headerHeight =
+			document.getElementById("header-strip").clientHeight;
+		const menuHeight = document.querySelector("#main-menu ul").clientHeight;
+		const menuBg = document.getElementById("menu-bg");
+		menuBg.style.height = `${headerHeight}px`;
 		let gsapTlDesktop = gsap.timeline({ paused: true });
-		gsapTlDesktop.to("#menu-bg", {
+		gsapTlDesktop.to(menuBg, {
 			height: menuHeight,
 			duration: 0.4,
 		});

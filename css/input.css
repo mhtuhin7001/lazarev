@@ -38,6 +38,26 @@ p {
 	@apply text-[clamp(.9rem,calc(1vw+0.2rem),1.5rem)] leading-[clamp(1.1rem,calc(1vw+0.5rem),1.75rem)];
 }
 
+/* Lenis */
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+	overflow: clip;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+.lenis.lenis-smooth iframe {
+	pointer-events: none;
+}
+.lenis.lenis-autoToggle {
+	transition-property: overflow;
+	transition-duration: 1ms;
+	transition-behavior: allow-discrete;
+}
+
 /* Header */
 #menu-btn.change span:first-child {
 	@apply translate-y-0.5 -rotate-45;
