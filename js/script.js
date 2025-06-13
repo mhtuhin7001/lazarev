@@ -1,3 +1,81 @@
+// Register Gsap Plugin
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
+// Loader & First View Animation
+document.addEventListener("DOMContentLoaded", () => {
+	window.addEventListener("load", () => {
+		const gsapTl = gsap.timeline();
+		// Loading
+		document.getElementById("loader-bar").style.display = "none";
+		gsapTl.to(
+			"#loader-path",
+			{
+				width: "100dvw",
+				height: "100dvh",
+				bottom: 0,
+				borderRadius: 0,
+				duration: 1.25,
+				ease: "power2.in",
+			},
+			"-=0.2"
+		);
+		gsapTl.to("#loader", {
+			opacity: 0,
+			display: "none",
+		});
+		gsapTl.to(
+			"body",
+			{
+				overflowY: "auto",
+			},
+			"-=0.4"
+		);
+		// First View
+		// Header
+		gsapTl.from(
+			"#header-strip, #menu-bg",
+			{
+				y: "-105%",
+			},
+			"-=0.4"
+		);
+		// Menu
+		gsapTl.from("#main-menu, #hero-title", {
+			opacity: 0,
+			y: 5,
+			duration: 0.5,
+		});
+		// Hero Describe
+		new SplitText("#hero-home p", {
+			type: "lines",
+			linesClass: "lineChild",
+		});
+		new SplitText("#hero-home p", {
+			type: "lines",
+			linesClass: "lineParent",
+		});
+		gsapTl.fromTo(
+			"#hero-home p .lineChild",
+			{ yPercent: 100, opacity: 0 },
+			{
+				yPercent: 0,
+				opacity: 1,
+				duration: 0.4,
+				stagger: 0.15,
+				ease: "power2.out",
+			}
+		);
+		// Hero Partners
+		gsapTl.from(
+			"#partners",
+			{
+				width: 0,
+			},
+			"-=0.1"
+		);
+	});
+});
+
 // Initialize Lenis
 document.addEventListener("DOMContentLoaded", () => {
 	const lenis = new Lenis({
@@ -194,5 +272,30 @@ document.addEventListener("DOMContentLoaded", () => {
 			fullReel.muted = true;
 			muteUnmute.innerHTML = `<path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM17.78 9.22a.75.75 0 1 0-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 1 0 1.06-1.06L20.56 12l1.72-1.72a.75.75 0 1 0-1.06-1.06l-1.72 1.72-1.72-1.72Z" />`;
 		}
+	});
+});
+
+// Featured News
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll("#featured-news a").forEach(function (e) {
+		e.addEventListener("mouseenter", () => {
+			gsap.to(e.childNodes[1], {
+				scale: 1,
+				opacity: 1,
+			});
+		});
+		e.addEventListener("mousemove", (t) => {
+			gsap.to(e.childNodes[1], {
+				x: t.x - e.getBoundingClientRect().x - 55,
+				y: t.y - e.getBoundingClientRect().y - 50,
+				duration: 0.6,
+			});
+		});
+		e.addEventListener("mouseleave", () => {
+			gsap.to(e.childNodes[1], {
+				opacity: 0,
+				scale: 0,
+			});
+		});
 	});
 });

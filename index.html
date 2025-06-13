@@ -12,7 +12,20 @@
 		<!-- Main Style -->
 		<link rel="stylesheet" href="css/input.css" />
 	</head>
-	<body class="overflow-x-hidden font-gilroy">
+	<body class="overflow-hidden font-gilroy">
+		<!-- Loader -->
+		<section id="loader" class="fixed size-full bg-white inset-0 z-100">
+			<div
+				id="loader-path"
+				class="overflow-hidden absolute w-1/3 h-4 bg-Onyx mx-auto rounded-2xl inset-x-0 bottom-1/4 z-101"
+			>
+				<div
+					id="loader-bar"
+					class="absolute w-1/2 h-4 bg-shamrockGreen rounded-2xl transition-transform duration-300 ease-in animate-loading"
+				></div>
+			</div>
+		</section>
+
 		<!-- Header -->
 		<header class="text-white">
 			<!-- Header Strip -->
@@ -66,10 +79,10 @@
 					class="flex flex-col size-8 bg-Iridium ms-1.5 gap-1 justify-center items-center rounded-full cursor-pointer xl:hidden"
 				>
 					<span
-						class="w-4 h-[1px] bg-white transition-all duration-300"
+						class="w-4 h-px bg-white transition-all duration-300"
 					></span>
 					<span
-						class="w-4 h-[1px] bg-white transition-all duration-300"
+						class="w-4 h-px bg-white transition-all duration-300"
 					></span>
 				</button>
 			</div>
@@ -162,7 +175,7 @@
 			</nav>
 			<div
 				id="menu-bg"
-				class="fixed w-full bg-Onyx top-0 z-49 after:content-[''] after:absolute after:h-[1px] after:bg-white after:mx-(--sectionGap) after:-bottom-[1px] after:left-0 after:right-0 xl:inline-block"
+				class="fixed w-full bg-Onyx top-0 z-49 after:content-[''] after:absolute after:h-px after:bg-white after:mx-(--sectionGap) after:-bottom-px after:left-0 after:right-0 xl:inline-block"
 			></div>
 		</header>
 
@@ -175,22 +188,27 @@
 				id="hero-title"
 				class="uppercase text-[clamp(2rem,calc(8vw+1rem),14rem)] leading-[clamp(1.5rem,calc(7vw+1rem),12rem)] font-bold mt-(--sectionGap)"
 			>
-				AI & ML <br class="sm:hidden" />
-				Pr<span
-					class="inline-grid size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] place-items-center bg-shamrockGreen rounded-full"
-					><svg fill="none" viewBox="0 0 131 136">
+				AI & ML
+				<span>
+					Pr<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 131 136"
+						fill="none"
+					>
 						<path
 							data-morph="end"
-							fill="#fff"
+							fill="currentColor"
 							d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
 						></path>
 						<path
 							data-morph="start"
-							fill="#fff"
+							fill="currentColor"
 							d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
 							data-original="M65.72 109.14c10.08 0 17.76-3.78 23.04-11.34 5.4-7.68 8.1-17.64 8.1-29.88 0-12.24-2.7-22.2-8.1-29.88-5.28-7.68-12.96-11.52-23.04-11.52-9.96 0-17.7 3.84-23.22 11.52-5.4 7.68-8.1 17.64-8.1 29.88 0 12.12 2.7 22.02 8.1 29.7 5.52 7.68 13.26 11.52 23.22 11.52Zm46.08 7.02c-11.64 12.6-27.06 18.9-46.26 18.9s-34.62-6.3-46.26-18.9C7.76 103.56 2 87.48 2 67.92c0-19.56 5.76-35.64 17.28-48.24C30.92 7.08 46.34.78 65.54.78s34.62 6.3 46.26 18.9c11.64 12.6 17.46 28.68 17.46 48.24 0 19.56-5.82 35.64-17.46 48.24Z"
-						></path></svg></span
-				>duct Design Agency
+						></path>
+					</svg>
+					duct</span
+				>Design Agency
 			</div>
 			<p class="mx-[10%] mt-(--sectionGap)">
 				We partner with AI & ML businesses, guiding them from series A
@@ -324,10 +342,146 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Featured News -->
+		<section
+			id="featured-news"
+			class="text-white bg-Onyx p-(--sectionGap) border-t-1 border-t-Iridium lg:flex lg:justify-between"
+		>
+			<div class="flex flex-col gap-3 lg:basis-1/2 lg:justify-between">
+				<p>
+					Exclusive insights into <br />
+					Stories Behind the Headlines
+				</p>
+				<h6 class="me-[35%]">
+					Uncover the deeper meaning behind today's biggest stories
+					with expert analysis, context, and perspectives you won't
+					find elsewhere.
+				</h6>
+			</div>
+			<div class="mt-7 lg:basis-1/2">
+				<a
+					href=""
+					class="relative flex pt-6 pb-13 justify-between items-end gap-4 border-t-1 border-t-Iridium first:pt-0 first:border-none last:pb-0 before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left first:before:hidden lg:items-start"
+				>
+					<img
+						src="assets/image/news-banner-1.jpg"
+						class="absolute size-20 rounded-full object-cover inset-0 scale-0 opacity-0"
+						alt="News Banner"
+						loading="lazy"
+					/>
+					<h4>
+						How to Design an AI InterFace User will Trust in 2024?
+					</h4>
+					<span
+						class="flex font-medium text-Iridium items-center gap-2.5 whitespace-nowrap"
+					>
+						5 min read
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-4">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="white"
+							></path>
+						</svg>
+					</span>
+				</a>
+				<a
+					href=""
+					class="relative flex pt-6 pb-13 justify-between items-end gap-4 border-t-1 border-t-Iridium first:pt-0 first:border-none last:pb-0 before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left first:before:hidden lg:items-start"
+				>
+					<img
+						src="assets/image/news-banner-2.jpg"
+						class="absolute size-20 rounded-full object-cover inset-0 scale-0 opacity-0"
+						alt="News Banner"
+						loading="lazy"
+					/>
+					<h4>
+						How AI Influences Design and The Reciprocal Impact of UX
+						on AI-Driven Products
+					</h4>
+					<span
+						class="flex font-medium text-Iridium items-center gap-2.5 whitespace-nowrap"
+					>
+						8 min read
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-4">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="white"
+							></path>
+						</svg>
+					</span>
+				</a>
+				<a
+					href=""
+					class="relative flex pt-6 pb-13 justify-between items-end gap-4 border-t-1 border-t-Iridium first:pt-0 first:border-none last:pb-0 before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left first:before:hidden lg:items-start"
+				>
+					<img
+						src="assets/image/news-banner-3.jpg"
+						class="absolute size-20 rounded-full object-cover inset-0 scale-0 opacity-0"
+						alt="News Banner"
+						loading="lazy"
+					/>
+					<h4>Lazarev Becomes A Professional Webflow Partner</h4>
+					<span
+						class="flex font-medium text-Iridium items-center gap-2.5 whitespace-nowrap"
+					>
+						3 min read
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-4">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="white"
+							></path>
+						</svg>
+					</span>
+				</a>
+				<a
+					href=""
+					class="relative flex pt-6 pb-13 justify-between items-end gap-4 border-t-1 border-t-Iridium first:pt-0 first:border-none last:pb-0 before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left first:before:hidden lg:items-start"
+				>
+					<img
+						src="assets/image/news-banner-4.jpg"
+						class="absolute size-20 rounded-full object-cover inset-0 scale-0 opacity-0"
+						alt="News Banner"
+						loading="lazy"
+					/>
+					<h4>
+						AI-Based Industial Software Canvass AI Secures $7.5M in
+						Funding
+					</h4>
+					<span
+						class="flex font-medium text-Iridium items-center gap-2.5 whitespace-nowrap"
+					>
+						6 min read
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-4">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="white"
+							></path>
+						</svg>
+					</span>
+				</a>
+			</div>
+		</section>
 		<!-- Lenis Script -->
 		<script src="js/lenis.min.js"></script>
 		<!-- GSAP Script -->
 		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- GSAP SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
 		<!-- Main Script -->
 		<script src="js/script.js"></script>
 	</body>
