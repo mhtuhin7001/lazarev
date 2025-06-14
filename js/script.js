@@ -1,5 +1,47 @@
+// Initialize Lenis
+document.addEventListener("DOMContentLoaded", () => {
+	const lenis = new Lenis({
+		duration: 1.2,
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		smooth: true,
+		smoothTouch: true,
+	});
+	function raf(time) {
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	}
+	requestAnimationFrame(raf);
+});
+
 // Register Gsap Plugin
 gsap.registerPlugin(SplitText, ScrollTrigger);
+
+// Initialize SplitText
+document.addEventListener("DOMContentLoaded", () => {
+	// Line Split
+	new SplitText("#hero-home p", {
+		type: "lines",
+		linesClass: "lineChild",
+	});
+	new SplitText("#hero-home p", {
+		type: "lines",
+		linesClass: "lineParent",
+	});
+
+	// Letter Split
+	const charParent = new SplitText("#hero-title ,#hero-title span", {
+		type: "chars",
+	});
+	charParent.chars.forEach((char, i) => {
+		char.classList.add("charParent");
+	});
+	const charChild = new SplitText("#hero-title ,#hero-title span", {
+		type: "chars",
+	});
+	charChild.chars.forEach((char, i) => {
+		char.classList.add("charChild");
+	});
+});
 
 // Loader & First View Animation
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			{
 				overflowY: "auto",
 			},
-			"-=0.4"
+			"-=0.5"
 		);
 		// First View
 		// Header
@@ -40,31 +82,33 @@ document.addEventListener("DOMContentLoaded", () => {
 			"-=0.4"
 		);
 		// Menu
-		gsapTl.from("#main-menu, #hero-title", {
-			opacity: 0,
-			y: 5,
-			duration: 0.5,
-		});
-		// Hero Describe
-		new SplitText("#hero-home p", {
-			type: "lines",
-			linesClass: "lineChild",
-		});
-		new SplitText("#hero-home p", {
-			type: "lines",
-			linesClass: "lineParent",
-		});
-		gsapTl.fromTo(
-			"#hero-home p .lineChild",
-			{ yPercent: 100, opacity: 0 },
+		if (window.matchMedia("(min-width: 1280px)").matches) {
+			gsapTl.from("#main-menu", {
+				opacity: 0,
+				y: 5,
+				duration: 0.5,
+			});
+		}
+		gsapTl.from(
+			"#hero-title .charChild",
 			{
-				yPercent: 0,
-				opacity: 1,
-				duration: 0.4,
-				stagger: 0.15,
-				ease: "power2.out",
-			}
+				opacity: 0,
+				yPercent: 100,
+				x: -5,
+				duration: 0.55,
+				stagger: { amount: 0.55 },
+				ease: "power1.out",
+			},
+			"-=0.5"
 		);
+		// Hero Describe
+		gsapTl.from("#hero-home p .lineChild", {
+			yPercent: 100,
+			opacity: 0,
+			duration: 0.4,
+			stagger: { amount: 0.15 },
+			ease: "power2.out",
+		});
 		// Hero Partners
 		gsapTl.from(
 			"#partners",
@@ -74,21 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			"-=0.1"
 		);
 	});
-});
-
-// Initialize Lenis
-document.addEventListener("DOMContentLoaded", () => {
-	const lenis = new Lenis({
-		duration: 1.2,
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-		smooth: true,
-		smoothTouch: true,
-	});
-	function raf(time) {
-		lenis.raf(time);
-		requestAnimationFrame(raf);
-	}
-	requestAnimationFrame(raf);
 });
 
 // Header
@@ -127,10 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Desktop behavior (> 1280px)
 	else {
+		const menuBg = document.getElementById("menu-bg");
+		const menuHeight = mainMenu.clientHeight;
 		const headerHeight =
 			document.getElementById("header-strip").clientHeight;
-		const menuHeight = document.querySelector("#main-menu ul").clientHeight;
-		const menuBg = document.getElementById("menu-bg");
 		menuBg.style.height = `${headerHeight}px`;
 		let gsapTlDesktop = gsap.timeline({ paused: true });
 		gsapTlDesktop.to(menuBg, {

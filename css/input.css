@@ -68,8 +68,9 @@ html.lenis body {
 	transition-behavior: allow-discrete;
 }
 
-/* Line Reavel */
-.lineParent {
+/* SplitText Animation */
+.lineParent,
+.charParent {
 	@apply overflow-hidden max-w-max mx-auto;
 }
 
