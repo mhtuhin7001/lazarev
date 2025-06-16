@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		gsapTl.from(
 			"#header-strip, #menu-bg",
 			{
-				y: "-105%",
+				yPercent: -105,
 			},
 			"-=0.4"
 		);
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (window.matchMedia("(min-width: 1280px)").matches) {
 			gsapTl.from("#main-menu", {
 				opacity: 0,
-				y: 5,
 				duration: 0.5,
 			});
 		}
@@ -99,16 +98,20 @@ document.addEventListener("DOMContentLoaded", () => {
 				stagger: { amount: 0.55 },
 				ease: "power1.out",
 			},
-			"-=0.5"
+			"-=0.38"
 		);
 		// Hero Describe
-		gsapTl.from("#hero-home p .lineChild", {
-			yPercent: 100,
-			opacity: 0,
-			duration: 0.4,
-			stagger: { amount: 0.15 },
-			ease: "power2.out",
-		});
+		gsapTl.from(
+			"#hero-home p .lineChild",
+			{
+				yPercent: 100,
+				opacity: 0,
+				duration: 0.4,
+				stagger: { amount: 0.15 },
+				ease: "power2.out",
+			},
+			"-=0.2"
+		);
 		// Hero Partners
 		gsapTl.from(
 			"#partners",
