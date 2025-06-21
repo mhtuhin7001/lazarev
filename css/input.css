@@ -106,6 +106,21 @@ html.lenis body {
 	@apply inline-block mt-0.5 px-2 py-1 border-1 border-Iridium rounded-full;
 }
 
+/* Advertise */
+#advertise {
+	counter-reset: adverList;
+}
+#advertise .advertise-box .advertise-inner::before {
+	content: "/0" counter(adverList);
+	counter-increment: adverList;
+}
+#advertise .advertise-box:last-child .advertise-inner {
+	@apply md:aspect-3/1 xl:aspect-2/1;
+}
+#advertise .advertise-box:nth-last-child(2) .advertise-inner {
+	@apply xl:aspect-2/1;
+}
+
 /* Font Face */
 @font-face {
 	font-family: "Gilroy";

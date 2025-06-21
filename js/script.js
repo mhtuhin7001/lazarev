@@ -73,13 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			"-=0.5"
 		);
 		// First View
+		gsapTl.from(
+			"#hero-home #hero-title svg",
+			{
+				scale: 0,
+				rotate: -45,
+				duration: 0.5,
+			},
+			"-=0.4"
+		);
 		// Header
 		gsapTl.from(
 			"#header-strip, #menu-bg",
 			{
 				yPercent: -105,
 			},
-			"-=0.4"
+			"-=0.6"
 		);
 		// Menu
 		if (window.matchMedia("(min-width: 1280px)").matches) {
@@ -98,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				stagger: { amount: 0.55 },
 				ease: "power1.out",
 			},
-			"-=0.38"
+			"-=0.5"
 		);
 		// Hero Describe
 		gsapTl.from(
@@ -110,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				stagger: { amount: 0.15 },
 				ease: "power2.out",
 			},
-			"-=0.2"
+			"-=0.3"
 		);
 		// Hero Partners
 		gsapTl.from(
@@ -118,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			{
 				width: 0,
 			},
-			"-=0.1"
+			"-=0.2"
 		);
 	});
 });
@@ -128,8 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Common elements
 	const menuBtn = document.getElementById("menu-btn");
 	const mainMenu = document.getElementById("main-menu");
-	// Mobile behavior (<= 1280px)
-	if (window.innerWidth <= 1280) {
+	// Mobile behavior (<= 1279px)
+	if (window.innerWidth <= 1279) {
 		// Menu Button Toggle
 		function menuBtnToggle() {
 			menuBtn.classList.toggle("change");
@@ -189,6 +198,23 @@ document.addEventListener("DOMContentLoaded", () => {
 			mainMenu.style.pointerEvents = "none";
 		});
 	}
+});
+
+// On Hover Video Play
+document.addEventListener("DOMContentLoaded", () => {
+	const advBox = document.querySelectorAll("#advertise .advertise-box");
+	advBox.forEach(function (box) {
+		const video = box.querySelector("video");
+		box.addEventListener("mouseenter", function () {
+			video.play();
+			video.style.opacity = 1;
+		});
+		box.addEventListener("mouseleave", function () {
+			video.pause();
+			video.currentTime = 0;
+			video.style.opacity = 0;
+		});
+	});
 });
 
 // Hero
