@@ -29,17 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// Letter Split
-	const charParent = new SplitText("#hero-title ,#hero-title span", {
+	new SplitText("#hero-title ,#hero-title span", {
 		type: "chars",
+		charsClass: "charParent",
 	});
-	charParent.chars.forEach((char, i) => {
-		char.classList.add("charParent");
-	});
-	const charChild = new SplitText("#hero-title ,#hero-title span", {
+	new SplitText("#hero-title ,#hero-title span, #animated-btn span", {
 		type: "chars",
-	});
-	charChild.chars.forEach((char, i) => {
-		char.classList.add("charChild");
+		charsClass: "charChild",
 	});
 });
 
@@ -215,6 +211,46 @@ document.addEventListener("DOMContentLoaded", () => {
 			video.style.opacity = 0;
 		});
 	});
+});
+
+// On Hove Animated Button
+document.addEventListener("DOMContentLoaded", () => {
+	let gsapTl = gsap.timeline({ paused: true });
+	gsapTl.to("#animated-btn #default-text .charChild", {
+		yPercent: -100,
+		rotateX: -75,
+		opacity: 0,
+		duration: 0.45,
+		stagger: {
+			amount: 0.18,
+		},
+		ease: "power1.inOut",
+	});
+	gsapTl.to(
+		"#animated-btn #hover-text .charChild",
+		{
+			yPercent: -100,
+			rotateX: 0,
+			opacity: 1,
+			duration: 0.45,
+			stagger: {
+				amount: 0.18,
+			},
+			ease: "power1.inOut",
+		},
+		"-=0.65"
+	);
+	// On Hover
+	document
+		.getElementById("animated-btn")
+		.addEventListener("mouseenter", () => {
+			gsapTl.play();
+		});
+	document
+		.getElementById("animated-btn")
+		.addEventListener("mouseleave", () => {
+			gsapTl.reverse();
+		});
 });
 
 // Hero

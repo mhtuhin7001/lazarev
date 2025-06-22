@@ -74,6 +74,11 @@ html.lenis body {
 	@apply overflow-hidden max-w-max mx-auto;
 }
 
+/* On Hove Animated Button */
+#animated-btn #hover-text .charChild {
+	@apply rotate-x-75 opacity-0 translate-y-full;
+}
+
 /* Header */
 #menu-btn.change span:first-child {
 	@apply translate-y-0.5 -rotate-45;
