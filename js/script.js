@@ -215,42 +215,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // On Hove Animated Button
 document.addEventListener("DOMContentLoaded", () => {
-	let gsapTl = gsap.timeline({ paused: true });
-	gsapTl.to("#animated-btn #default-text .charChild", {
-		yPercent: -100,
-		rotateX: -75,
-		opacity: 0,
-		duration: 0.45,
-		stagger: {
-			amount: 0.18,
-		},
-		ease: "power1.inOut",
-	});
-	gsapTl.to(
-		"#animated-btn #hover-text .charChild",
-		{
+	document.querySelectorAll("#animated-btn").forEach((btn) => {
+		let gsapTl = gsap.timeline({ paused: true });
+		gsapTl.to(btn.querySelectorAll("#default-text .charChild"), {
 			yPercent: -100,
-			rotateX: 0,
-			opacity: 1,
-			duration: 0.45,
+			rotateX: -75,
+			opacity: 0,
 			stagger: {
-				amount: 0.18,
+				amount: 0.22,
 			},
 			ease: "power1.inOut",
-		},
-		"-=0.65"
-	);
-	// On Hover
-	document
-		.getElementById("animated-btn")
-		.addEventListener("mouseenter", () => {
+		});
+		gsapTl.to(
+			btn.querySelectorAll("#hover-text .charChild"),
+			{
+				yPercent: -100,
+				rotateX: 0,
+				opacity: 1,
+				stagger: {
+					amount: 0.22,
+				},
+				ease: "power1.inOut",
+			},
+			"-=0.7"
+		);
+		btn.addEventListener("mouseenter", () => {
 			gsapTl.play();
 		});
-	document
-		.getElementById("animated-btn")
-		.addEventListener("mouseleave", () => {
+		btn.addEventListener("mouseleave", () => {
 			gsapTl.reverse();
 		});
+	});
+});
+
+// BG Parallax Effect
+document.addEventListener("DOMContentLoaded", () => {
+	gsap.to("#best", {
+		backgroundPosition: `50% ${-innerHeight / 4}px`,
+		scrollTrigger: {
+			trigger: "#best",
+			scrub: 4,
+		},
+	});
 });
 
 // Hero

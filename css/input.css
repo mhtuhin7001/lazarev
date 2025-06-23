@@ -126,6 +126,15 @@ html.lenis body {
 	@apply xl:aspect-2/1;
 }
 
+/* Success & Stories */
+#success-stories #success {
+	counter-reset: sucessList;
+}
+#success-stories #success div::before {
+	content: "/00" counter(sucessList);
+	counter-increment: sucessList;
+}
+
 /* Font Face */
 @font-face {
 	font-family: "Gilroy";
