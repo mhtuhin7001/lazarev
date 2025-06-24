@@ -135,6 +135,15 @@ html.lenis body {
 	counter-increment: sucessList;
 }
 
+/* Design Process */
+#design-process ol {
+	counter-reset: processList;
+}
+#design-process ol li::before {
+	content: counter(processList);
+	counter-increment: processList;
+}
+
 /* Font Face */
 @font-face {
 	font-family: "Gilroy";

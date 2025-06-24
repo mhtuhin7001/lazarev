@@ -399,3 +399,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+// Design Process
+document.addEventListener("DOMContentLoaded", () => {
+	const isSmallScreen = window.innerWidth <= 640;
+	const step = isSmallScreen ? 10 : 25;
+	document.querySelectorAll("#design-process ol").forEach((ul) => {
+		ul.querySelectorAll("li").forEach((li, index) => {
+			li.style.transform = `translateX(${index * step}px)`;
+		});
+	});
+	gsap.from("#design-process ol li", {
+		x: 0,
+		duration: 1,
+		stagger: {
+			amount: 0.2,
+		},
+		scrollTrigger: {
+			trigger: "#design-process",
+			scrub: true,
+		},
+	});
+});
