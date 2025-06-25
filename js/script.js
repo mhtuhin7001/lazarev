@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-// On Hover Video Play
+// Advertise on Hover Play Video
 document.addEventListener("DOMContentLoaded", () => {
 	const advBox = document.querySelectorAll("#advertise .advertise-box");
 	advBox.forEach(function (box) {
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	gsap.from("#design-process ol li", {
 		x: 0,
-		duration: 1,
+		duration: 1.5,
 		stagger: {
 			amount: 0.2,
 		},
@@ -420,4 +420,56 @@ document.addEventListener("DOMContentLoaded", () => {
 			scrub: true,
 		},
 	});
+});
+
+// Case Studies Filter
+document.addEventListener("DOMContentLoaded", () => {
+	// Project Filtering
+	const buttons = document.querySelectorAll("#projects-filter button");
+	const cards = document.querySelectorAll("#case-studies .project");
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const filter = button.getAttribute("data-filter");
+			buttons.forEach((btn) =>
+				btn.classList.remove("text-shamrockGreen")
+			);
+			button.classList.add("text-shamrockGreen");
+			cards.forEach((card) => {
+				card.style.display = "none";
+			});
+			document
+				.querySelectorAll(`.project[data-category="${filter}"]`)
+				.forEach((card) => {
+					card.style.display = "block";
+				});
+		});
+	});
+	if (buttons.length > 0) {
+		buttons[0].click();
+	}
+
+	// on Hover Play Video
+	cards.forEach(function (box) {
+		const video = box.querySelector("video");
+		box.addEventListener("mouseenter", function () {
+			video.play();
+		});
+		box.addEventListener("mouseleave", function () {
+			video.pause();
+			video.currentTime = 0;
+		});
+	});
+
+	// Mobile Devices Filter Options
+	if (window.innerWidth <= 1279) {
+		let isOpen = false;
+		document
+			.querySelector("#projects-filter")
+			.addEventListener("click", () => {
+				isOpen = !isOpen;
+				document.getElementById("projects-filter").style.height = isOpen
+					? "100%"
+					: "44px";
+			});
+	}
 });
