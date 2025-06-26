@@ -250,12 +250,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // BG Parallax Effect
 document.addEventListener("DOMContentLoaded", () => {
-	gsap.to("#best", {
-		backgroundPosition: `50% ${-innerHeight / 4}px`,
-		scrollTrigger: {
-			trigger: "#best",
-			scrub: 4,
-		},
+	["#best", "#jump-to"].forEach((selector) => {
+		gsap.to(selector, {
+			backgroundPosition: `50% ${-innerHeight / 4}px`,
+			scrollTrigger: {
+				trigger: selector,
+				scrub: 4,
+			},
+		});
 	});
 });
 
@@ -472,4 +474,30 @@ document.addEventListener("DOMContentLoaded", () => {
 					: "44px";
 			});
 	}
+});
+
+// Jump to Cursor
+document.addEventListener("DOMContentLoaded", () => {
+	const jumpTo = document.getElementById("jump-to");
+	const jumpToCursor = document.getElementById("jump-to-cursor");
+
+	jumpTo.addEventListener("mouseenter", () => {
+		gsap.to(jumpToCursor, {
+			scale: 1,
+			opacity: 1,
+		});
+	});
+	jumpTo.addEventListener("mousemove", (move) => {
+		gsap.to(jumpToCursor, {
+			x: move.x - jumpTo.getBoundingClientRect().x - 125,
+			y: move.y - jumpTo.getBoundingClientRect().y - 115,
+			duration: 0.6,
+		});
+	});
+	jumpTo.addEventListener("mouseleave", () => {
+		gsap.to(jumpToCursor, {
+			scale: 0,
+			opacity: 0,
+		});
+	});
 });
