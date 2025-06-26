@@ -112,12 +112,17 @@ html.lenis body {
 }
 
 /* Advertise */
-#advertise {
-	counter-reset: adverList;
+#advertise,
+#success-stories #success,
+#design-process ol,
+#client-reviews {
+	counter-reset: customList;
 }
-#advertise .advertise-box .advertise-inner::before {
-	content: "/0" counter(adverList);
-	counter-increment: adverList;
+#advertise .advertise-box .advertise-inner::before,
+#success-stories #success div::before,
+#client-reviews .client-review::before {
+	content: "/0" counter(customList);
+	counter-increment: customList;
 }
 #advertise .advertise-box:last-child .advertise-inner {
 	@apply md:aspect-3/1 xl:aspect-2/1;
@@ -126,22 +131,10 @@ html.lenis body {
 	@apply xl:aspect-2/1;
 }
 
-/* Success & Stories */
-#success-stories #success {
-	counter-reset: sucessList;
-}
-#success-stories #success div::before {
-	content: "/00" counter(sucessList);
-	counter-increment: sucessList;
-}
-
 /* Design Process */
-#design-process ol {
-	counter-reset: processList;
-}
 #design-process ol li::before {
-	content: counter(processList);
-	counter-increment: processList;
+	content: counter(customList);
+	counter-increment: customList;
 }
 
 /* Font Face */

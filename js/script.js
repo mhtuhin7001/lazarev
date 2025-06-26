@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			amount: 0.2,
 		},
 		scrollTrigger: {
-			trigger: "#design-process",
+			trigger: "#process",
 			scrub: true,
 		},
 	});
