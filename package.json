@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "vite",
-		"build": "tailwindcss -i /css/style.css -o style.css --minify",
+		"build": "tailwindcss -i /css/input.css -o style.css --minify",
 		"dev": "vite build"
 	},
 	"keywords": [],
@@ -12,10 +12,10 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
-		"@tailwindcss/postcss": "^4.1.8",
+		"@tailwindcss/postcss": "^4.1.11",
 		"autoprefixer": "^10.4.21",
-		"postcss": "^8.5.4",
-		"tailwindcss": "^4.1.8",
-		"vite": "^6.3.5"
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.11",
+		"vite": "^7.0.0"
 	}
 }

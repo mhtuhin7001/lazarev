@@ -2,6 +2,8 @@
 @theme {
 	--font-gilroy: "Gilroy", sans-serif;
 	--sectionGap: clamp(0.75rem, 4%, 5rem);
+	--text-hero: clamp(2rem, calc(8vw + 1rem), 14rem);
+	--heroTexlLeading: clamp(1.5rem, calc(7vw + 1rem), 12rem);
 	--color-Iridium: #3d3d3d;
 	--color-Onyx: #111111;
 	--color-shamrockGreen: #0da34e;
