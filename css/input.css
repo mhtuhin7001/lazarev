@@ -101,6 +101,9 @@ html.lenis body {
 #main-menu .menu-item > .sub-menu a {
 	@apply block relative after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left  xl:inline-block xl:text-sm xl:font-normal xl:py-1.5 xl:hover:text-white;
 }
+#main-menu .menu-item > .sub-menu .menu-item.current-menu-item a {
+	@apply opacity-60;
+}
 
 /* Footer */
 footer ul .menu-item a {
