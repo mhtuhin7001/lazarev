@@ -265,7 +265,7 @@
 		<!-- Show Reel -->
 		<section
 			id="show-reel"
-			class="relative h-dvh text-white bg-Onyx p-(--sectionGap)"
+			class="relative h-[60dvh] text-white bg-Onyx p-(--sectionGap) sm:h-dvh"
 		>
 			<div
 				id="reel-cursor"
@@ -295,7 +295,7 @@
 			<div>
 				<span
 					id="reel-close"
-					class="absolute hidden text-sm font-semibold mix-blend-difference inset-0 pointer-events-none z-52"
+					class="fixed hidden text-sm font-semibold mix-blend-difference inset-0 pointer-events-none z-52"
 					>Close Reel</span
 				>
 				<video
@@ -306,7 +306,7 @@
 				></video>
 				<div
 					id="reel-controls"
-					class="absolute overflow-hidden w-0 mx-auto flex justify-between items-center inset-x-0 bottom-10 z-52"
+					class="fixed overflow-hidden w-0 mx-auto flex justify-between items-center inset-x-0 bottom-10 z-52"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -488,7 +488,7 @@
 				class="advertise-box pt-3 md:p-1.5 md:basis-1/2 md:last:basis-full xl:basis-1/3 xl:nth-last-[2]:basis-1/2 xl:last:basis-1/2"
 			>
 				<div
-					class="advertise-inner relative bg-[#1f1f1f] p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
+					class="advertise-inner relative bg-eerieBlack p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
 				>
 					<video
 						muted
@@ -508,7 +508,7 @@
 				class="advertise-box pt-3 md:p-1.5 md:basis-1/2 md:last:basis-full xl:basis-1/3 xl:nth-last-[2]:basis-1/2 xl:last:basis-1/2"
 			>
 				<div
-					class="advertise-inner relative bg-[#1f1f1f] p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
+					class="advertise-inner relative bg-eerieBlack p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
 				>
 					<video
 						muted
@@ -528,7 +528,7 @@
 				class="advertise-box pt-3 md:p-1.5 md:basis-1/2 md:last:basis-full xl:basis-1/3 xl:nth-last-[2]:basis-1/2 xl:last:basis-1/2"
 			>
 				<div
-					class="advertise-inner relative bg-[#1f1f1f] p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
+					class="advertise-inner relative bg-eerieBlack p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
 				>
 					<video
 						muted
@@ -548,7 +548,7 @@
 				class="advertise-box pt-3 md:p-1.5 md:basis-1/2 md:last:basis-full xl:basis-1/3 xl:nth-last-[2]:basis-1/2 xl:last:basis-1/2"
 			>
 				<div
-					class="advertise-inner relative bg-[#1f1f1f] p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
+					class="advertise-inner relative bg-eerieBlack p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
 				>
 					<video
 						muted
@@ -567,7 +567,7 @@
 				class="advertise-box pt-3 md:p-1.5 md:basis-1/2 md:last:basis-full xl:basis-1/3 xl:nth-last-[2]:basis-1/2 xl:last:basis-1/2"
 			>
 				<div
-					class="advertise-inner relative bg-[#1f1f1f] p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
+					class="advertise-inner relative bg-eerieBlack p-4 rounded-2xl before:absolute before:text-sm before:right-4 before:bottom-4 before:opacity-60 before:z-1 md:p-0 md:before:top-6 md:before:left-6"
 				>
 					<video
 						muted
@@ -1185,7 +1185,7 @@
 			>
 				<div
 					id="projects-filter"
-					class="sticky overflow-hidden flex flex-col h-11 bg-[#1f1f1f] px-4 py-3 gap-4 rounded-4xl top-14 z-20 xl:basis-1/4 xl:h-full xl:bg-transparent xl:p-0 xl:rounded-none xl:top-20"
+					class="sticky overflow-hidden flex flex-col h-11 bg-eerieBlack px-4 py-3 gap-4 rounded-4xl top-14 z-20 xl:basis-1/4 xl:h-full xl:bg-transparent xl:p-0 xl:rounded-none xl:top-20"
 				>
 					<span
 						class="flex uppercase text-sm justify-between items-center xl:hidden"
@@ -1260,7 +1260,11 @@
 					</a>
 				</div>
 				<div class="md:grid md:grid-cols-2 md:gap-6 xl:basis-2/3">
-					<a href="" data-category="ai" class="project group mt-8">
+					<a
+						href="case-detail.html"
+						data-category="ai"
+						class="project group mt-8"
+					>
 						<h4 class="font-semibold">
 							How Rhea AI by Accern Redefined Financial Research
 						</h4>
@@ -1271,7 +1275,11 @@
 							class="relative w-full h-40 object-cover transition-all duration-500 group-hover:h-80 group-hover:-mb-20 group-hover:-translate-y-20 xl:group-hover:-mb-40 xl:group-hover:-translate-y-40 2xl:h-60 2xl:group-hover:h-96 2xl:group-hover:-mb-36 2xl:group-hover:-translate-y-36"
 						></video>
 					</a>
-					<a href="" data-category="ai" class="project group mt-8">
+					<a
+						href="case-detail.html"
+						data-category="ai"
+						class="project group mt-8"
+					>
 						<h4 class="font-semibold">Pika AI Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
 							Pika AI is a new and better search engine that
@@ -1286,7 +1294,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="fintech"
 						class="project group mt-8"
 					>
@@ -1305,7 +1313,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="fintech"
 						class="project group mt-8"
 					>
@@ -1323,7 +1331,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="fintech"
 						class="project group mt-8"
 					>
@@ -1343,7 +1351,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1362,7 +1370,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1379,7 +1387,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1396,7 +1404,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1416,7 +1424,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1437,7 +1445,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1458,7 +1466,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1478,7 +1486,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1497,7 +1505,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1516,7 +1524,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1536,7 +1544,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1556,7 +1564,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1577,7 +1585,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1595,7 +1603,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1612,7 +1620,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1631,7 +1639,7 @@
 						></video>
 					</a>
 					<a
-						href=""
+						href="case-detail.html"
 						data-category="others"
 						class="project group mt-8"
 					>
@@ -1647,7 +1655,11 @@
 							class="relative w-full h-40 object-cover transition-all duration-500 group-hover:h-80 group-hover:-mb-20 group-hover:-translate-y-20 xl:group-hover:-mb-40 xl:group-hover:-translate-y-40 2xl:h-60 2xl:group-hover:h-96 2xl:group-hover:-mb-36 2xl:group-hover:-translate-y-36"
 						></video>
 					</a>
-					<a href="" data-category="web3" class="project group mt-8">
+					<a
+						href="case-detail.html"
+						data-category="web3"
+						class="project group mt-8"
+					>
 						<h4 class="font-semibold">
 							Blockbeat Design Case Study
 						</h4>
@@ -1662,7 +1674,11 @@
 							class="relative w-full h-40 object-cover transition-all duration-500 group-hover:h-80 group-hover:-mb-20 group-hover:-translate-y-20 xl:group-hover:-mb-40 xl:group-hover:-translate-y-40 2xl:h-60 2xl:group-hover:h-96 2xl:group-hover:-mb-36 2xl:group-hover:-translate-y-36"
 						></video>
 					</a>
-					<a href="" data-category="web3" class="project group mt-8">
+					<a
+						href="case-detail.html"
+						data-category="web3"
+						class="project group mt-8"
+					>
 						<h4 class="font-semibold">
 							Metastaq Design Case Study
 						</h4>
@@ -1678,7 +1694,11 @@
 							class="relative w-full h-40 object-cover transition-all duration-500 group-hover:h-80 group-hover:-mb-20 group-hover:-translate-y-20 xl:group-hover:-mb-40 xl:group-hover:-translate-y-40 2xl:h-60 2xl:group-hover:h-96 2xl:group-hover:-mb-36 2xl:group-hover:-translate-y-36"
 						></video>
 					</a>
-					<a href="" data-category="web3" class="project group mt-8">
+					<a
+						href="case-detail.html"
+						data-category="web3"
+						class="project group mt-8"
+					>
 						<h4 class="font-semibold">
 							CollectorCrypt Design Case Study
 						</h4>
@@ -1982,7 +2002,7 @@
 				}
 			});
 
-			// Show Reel
+			// ShowReel Cursor
 			document.addEventListener("DOMContentLoaded", () => {
 				const shortReel = document.getElementById("short-reel");
 				const reelCursor = document.getElementById("reel-cursor");
@@ -2006,85 +2026,6 @@
 						scale: 0,
 						opacity: 0,
 					});
-				});
-
-				// Full Reel
-				let gsapTl = gsap.timeline({ paused: true });
-				const fullReel = document.getElementById("full-reel");
-				gsapTl.to(fullReel, {
-					width: "100dvw",
-					height: "100dvh",
-					bottom: 0,
-					borderRadius: 0,
-					duration: 1.25,
-					ease: "power2.in",
-				});
-				gsapTl.to("#reel-controls", {
-					width: "90%",
-				});
-				fullReel.addEventListener("mousemove", (e) => {
-					gsap.to("#reel-close", {
-						x: e.x,
-						y: e.y - 18,
-						duration: 0.6,
-					});
-				});
-
-				// Show Reel Animation
-				shortReel.addEventListener("click", () => {
-					gsapTl
-						.timeScale(1)
-						.play()
-						.eventCallback("onComplete", () => {
-							document.body.style.overflow = "hidden";
-							document.getElementById(
-								"reel-close"
-							).style.display = "inline-block";
-						});
-					fullReel.play();
-					fullReel.muted = false;
-				});
-				fullReel.addEventListener("click", () => {
-					document.getElementById("reel-close").style.display =
-						"none";
-					document.body.style.overflow = "auto";
-					fullReel.muted = true;
-					fullReel.pause();
-					gsapTl.timeScale(15).reverse();
-				});
-
-				// Video Controls
-				// Play Pause
-				const playPause = document.getElementById("reel-play-pause");
-				playPause.addEventListener("click", function () {
-					if (fullReel.paused) {
-						fullReel.play();
-						playPause.innerHTML = `<path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/>`;
-					} else {
-						fullReel.pause();
-						playPause.innerHTML = `<path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clip-rule="evenodd" />`;
-					}
-				});
-				// Progress
-				const progressBar = document.getElementById("reel-progress");
-				fullReel.addEventListener("timeupdate", function () {
-					progressBar.value =
-						(fullReel.currentTime / fullReel.duration) * 100;
-				});
-				progressBar.addEventListener("input", function () {
-					fullReel.currentTime =
-						(progressBar.value / 100) * fullReel.duration;
-				});
-				// Mute Unmute
-				const muteUnmute = document.getElementById("reel-mute-unmute");
-				muteUnmute.addEventListener("click", function () {
-					if (fullReel.muted) {
-						fullReel.muted = false;
-						muteUnmute.innerHTML = `<path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"/> <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"/>`;
-					} else {
-						fullReel.muted = true;
-						muteUnmute.innerHTML = `<path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM17.78 9.22a.75.75 0 1 0-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 1 0 1.06-1.06L20.56 12l1.72-1.72a.75.75 0 1 0-1.06-1.06l-1.72 1.72-1.72-1.72Z" />`;
-					}
 				});
 			});
 
@@ -2172,18 +2113,6 @@
 				if (buttons.length > 0) {
 					buttons[0].click();
 				}
-
-				// on Hover Play Video
-				cards.forEach(function (box) {
-					const video = box.querySelector("video");
-					box.addEventListener("mouseenter", function () {
-						video.play();
-					});
-					box.addEventListener("mouseleave", function () {
-						video.pause();
-						video.currentTime = 0;
-					});
-				});
 
 				// Mobile Devices Filter Options
 				if (window.innerWidth <= 1279) {
