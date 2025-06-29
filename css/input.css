@@ -4,8 +4,8 @@
 	--sectionGap: clamp(0.75rem, 4%, 5rem);
 	--text-hero: clamp(2rem, calc(8vw + 1rem), 14rem);
 	--heroTexlLeading: clamp(1.5rem, calc(7vw + 1rem), 12rem);
-	--color-Iridium: #3d3d3d;
-	--color-Onyx: #111111;
+	--color-iridium: #3d3d3d;
+	--color-onyx: #111111;
 	--color-eerieBlack: #1f1f1f;
 	--color-shamrockGreen: #0da34e;
 	--px: 1px;
@@ -91,7 +91,7 @@ html.lenis body {
 }
 /* Main Menu */
 #main-menu .menu-item a {
-	@apply hidden uppercase text-center text-lg font-semibold py-1.5 border-b-1 border-b-Iridium hover:text-[#808080] xl:block xl:text-start xl:text-base xl:font-medium xl:p-0 xl:border-none;
+	@apply hidden uppercase text-center text-lg font-semibold py-1.5 border-b-1 border-b-iridium hover:text-[#808080] xl:block xl:text-start xl:text-base xl:font-medium xl:p-0 xl:border-none;
 }
 #main-menu .menu-item > .sub-menu {
 	@apply xl:pt-5;
@@ -113,18 +113,21 @@ footer ul .menu-item a {
 
 /* Pagination */
 nav.pagination {
-	@apply flex bg-Iridium mx-auto p-1.5 items-center rounded-full;
+	@apply flex bg-iridium mx-auto p-1.5 items-center rounded-full;
+}
+nav.pagination .page-numbers-box {
+	@apply bg-onyx mx-4 p-1 rounded-full;
 }
 nav.pagination a,
 nav.pagination span {
 	@apply inline-grid size-7 text-sm font-medium place-items-center rounded-full;
 }
 nav.pagination span.current {
-	@apply text-Onyx bg-shamrockGreen;
+	@apply text-onyx bg-shamrockGreen;
 }
 nav.pagination a.prev,
 nav.pagination a.next {
-	@apply size-9 bg-Onyx;
+	@apply size-9 bg-onyx;
 }
 
 /* Hero Home */
@@ -135,7 +138,7 @@ nav.pagination a.next {
 	@apply inline-block size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] bg-shamrockGreen rounded-full;
 }
 #hero-home p span {
-	@apply inline-block mt-0.5 px-2 py-1 border-1 border-Iridium rounded-full;
+	@apply inline-block mt-0.5 px-2 py-1 border-1 border-iridium rounded-full;
 }
 
 /* Advertise */
@@ -162,6 +165,18 @@ nav.pagination a.next {
 #design-process ol li::before {
 	content: counter(customList);
 	counter-increment: customList;
+}
+
+/* News & Articles */
+#news-articles nav.pagination {
+	@apply bg-zinc-200;
+}
+#news-articles nav.pagination .page-numbers-box {
+	@apply bg-white;
+}
+#news-articles nav.pagination a.prev,
+#news-articles nav.pagination a.next {
+	@apply bg-zinc-50;
 }
 
 /* Font Face */
