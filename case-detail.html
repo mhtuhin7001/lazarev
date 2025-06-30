@@ -95,7 +95,7 @@
 					<li class="menu-item menu-item-has-children">
 						<a href="javascript:void(0)">Case Studies</a>
 						<ul class="sub-menu">
-							<li class="menu-item current-menu-item">
+							<li class="menu-item">
 								<a href="cases.html">Our Case Studies</a>
 							</li>
 						</ul>
@@ -184,7 +184,7 @@
 		<!-- Hero -->
 		<section
 			id="hero"
-			class="flex flex-col h-[60dvh] text-white bg-onyx p-(--sectionGap) justify-between sm:h-[80dvh]"
+			class="flex flex-wrap flex-col h-[60dvh] text-white bg-onyx p-(--sectionGap) justify-between sm:h-[80dvh]"
 		>
 			<ul
 				class="flex text-sm tracking-tight font-medium mt-14 items-center gap-1.5 lg:mt-(--sectionGap)"
@@ -358,7 +358,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="p-(--sectionGap) border-t-1 border-t-iridium md:flex">
+			<div
+				id="results"
+				class="p-(--sectionGap) border-t-1 border-t-iridium md:flex"
+			>
 				<h6 class="uppercase font-semibold mb-6 md:basis-1/4">
 					Results
 				</h6>
@@ -368,7 +371,13 @@
 					<div
 						class="bg-eerieBlack mt-1.5 p-4 rounded-lg md:mt-0 xl:p-6"
 					>
-						<h2 class="font-semibold">160</h2>
+						<h2
+							class="font-semibold"
+							data-count="160"
+							data-suffix=""
+						>
+							0
+						</h2>
 						<p class="mt-6 md:mt-8 xl:mt-12">
 							In the initial month following the launch of the
 							website, NODO accumulated a total of 106 completed
@@ -378,7 +387,13 @@
 					<div
 						class="bg-eerieBlack mt-1.5 p-4 rounded-lg md:mt-0 xl:p-6"
 					>
-						<h2 class="font-semibold">41%</h2>
+						<h2
+							class="font-semibold"
+							data-count="41"
+							data-suffix="%"
+						>
+							0
+						</h2>
 						<p class="mt-6 md:mt-8 xl:mt-12">
 							A portion of 41% of the individuals on the waitlist
 							were entirely new customers who demonstrated
@@ -388,7 +403,13 @@
 					<div
 						class="bg-eerieBlack mt-1.5 p-4 rounded-lg md:mt-0 xl:p-6"
 					>
-						<h2 class="font-semibold">8%</h2>
+						<h2
+							class="font-semibold"
+							data-count="8"
+							data-suffix="%"
+						>
+							0
+						</h2>
 						<p class="mt-6 md:mt-8 xl:mt-12">
 							During the inaugural month post-launch, NODO
 							experienced an 8% increase in their email audience.
@@ -737,5 +758,29 @@
 		<script src="js/SplitText.min.js"></script>
 		<!-- Main Script -->
 		<script src="js/script.js"></script>
+
+		<!-- News Detail Scripts -->
+		<script>
+			// Case About Resuts Counter
+			document.addEventListener("DOMContentLoaded", () => {
+				document.querySelectorAll("#results h2").forEach((counter) => {
+					let target = +counter.getAttribute("data-count");
+					let suffix = counter.getAttribute("data-suffix") || "";
+					let obj = { val: 0 };
+					gsap.to(obj, {
+						val: target,
+						duration: 3,
+						ease: "power1.out",
+						scrollTrigger: {
+							trigger: "#results",
+							start: "top 80%",
+						},
+						onUpdate: () => {
+							counter.textContent = Math.floor(obj.val) + suffix;
+						},
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

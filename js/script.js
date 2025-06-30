@@ -71,16 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			"-=0.5"
 		);
+		const heroHome = document.getElementById("hero-home");
 		// First View
-		gsapTl.from(
-			"#hero-home #hero-title svg",
-			{
-				scale: 0,
-				rotate: -45,
-				duration: 0.5,
-			},
-			"-=0.4"
-		);
+		if (heroHome) {
+			gsapTl.from(
+				"#hero-home #hero-title svg",
+				{
+					scale: 0,
+					rotate: -45,
+					duration: 0.5,
+				},
+				"-=0.4"
+			);
+		}
 		// Header
 		gsapTl.from(
 			"#header-strip, #menu-bg",
@@ -108,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			"-=0.5"
 		);
+		if (!heroHome) return;
 		// Hero Describe
 		gsapTl.from(
 			"#hero-home p .lineChild",
@@ -122,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 		// Hero Partners
 		gsapTl.from(
-			"#partners",
+			"#hero-home #partners",
 			{
 				width: 0,
 			},
@@ -256,6 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let gsapTl = gsap.timeline({ paused: true });
 	const shortReel = document.getElementById("short-reel");
 	const fullReel = document.getElementById("full-reel");
+	if (!shortReel) return;
 	gsapTl.to(fullReel, {
 		width: "100dvw",
 		height: "100dvh",
@@ -267,10 +272,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsapTl.to("#reel-controls", {
 		width: "90%",
 	});
-	fullReel.addEventListener("mousemove", (e) => {
+	fullReel.addEventListener("mousemove", (showreel) => {
 		gsap.to("#reel-close", {
-			x: e.x,
-			y: e.y - 18,
+			x: showreel.x,
+			y: showreel.y - 18,
 			duration: 0.6,
 		});
 	});
@@ -331,7 +336,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // BG Parallax Effect
 document.addEventListener("DOMContentLoaded", () => {
-	["#best", "#jump-to"].forEach((selector) => {
+	const parallax = document.querySelectorAll(".parallax");
+	if (!parallax) return;
+	parallax.forEach((selector) => {
 		gsap.to(selector, {
 			backgroundPosition: `50% ${-innerHeight / 4}px`,
 			scrollTrigger: {
@@ -346,7 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 	const jumpTo = document.getElementById("jump-to");
 	const jumpToCursor = document.getElementById("jump-to-cursor");
-
+	if (!jumpTo) return;
 	jumpTo.addEventListener("mouseenter", () => {
 		gsap.to(jumpToCursor, {
 			scale: 1,

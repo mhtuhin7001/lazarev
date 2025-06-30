@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>News Details - Lazarev</title>
+		<link
+			rel="shortcut icon"
+			href="assets/image/favicon.gif"
+			type="image/x-icon"
+		/>
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/input.css" />
+	</head>
+	<body class="overflow-hidden font-gilroy">
+		<!-- Loader -->
+		<section id="loader" class="fixed size-full bg-white inset-0 z-100">
+			<div
+				id="loader-path"
+				class="overflow-hidden absolute w-1/3 h-4 bg-onyx mx-auto rounded-2xl inset-x-0 bottom-1/4 z-101"
+			>
+				<div
+					id="loader-bar"
+					class="absolute w-1/2 h-4 bg-shamrockGreen rounded-2xl transition-transform duration-300 ease-in animate-loading"
+				></div>
+			</div>
+		</section>
+
+		<!-- Header -->
+		<header class="text-white">
+			<!-- Header Strip -->
+			<div
+				id="header-strip"
+				class="fixed w-full uppercase flex items-center bg-onyx px-(--sectionGap) py-2.5 top-0 z-50 xl:py-5"
+			>
+				<a href="index.html" class="uppercase font-semibold me-auto">
+					<img
+						src="assets/image/logo.svg"
+						class="h-5"
+						alt="Site Logo"
+						loading="lazy"
+					/>
+					<span class="hidden font-bold text-4xl">Lazarev.</span>
+				</a>
+				<a href="" class="group relative p-1.5 xl:px-0 xl:py-1.5">
+					<div
+						class="flex gap-4 items-center after:content-[''] after:absolute after:size-full after:bg-shamrockGreen after:rounded-full after:top-0 after:right-0 after:transition-all after:duration-300 after:-z-1 xl:group-hover:after:w-10"
+					>
+						<span
+							class="hidden font-medium ms-3.5 whitespace-nowrap transition-all duration-300 group-hover:text-shamrockGreen xl:inline-block"
+							>Let's Talk</span
+						>
+						<svg
+							viewBox="-2 -2 24 24"
+							fill="none"
+							class="size-5 xl:me-2.5"
+						>
+							<path
+								class="group-hover:hidden"
+								data-morph="start"
+								d="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+								fill="currentcolor"
+								data-original="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+							></path>
+							<path
+								class="hidden group-hover:inline-block"
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</div>
+				</a>
+				<button
+					id="menu-btn"
+					onclick="menuBtnToggle(this)"
+					class="flex flex-col size-8 bg-iridium ms-1.5 gap-1 justify-center items-center rounded-full cursor-pointer xl:hidden"
+				>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+				</button>
+			</div>
+			<!-- Main Menu  -->
+			<nav
+				id="main-menu"
+				class="overflow-y-scroll fixed h-full bg-onyx px-(--sectionGap) top-0 inset-x-0 -translate-y-full z-49 xl:overflow-y-hidden xl:size-fit xl:bg-transparent xl:mx-auto xl:translate-0 xl:pointer-events-none xl:z-50"
+			>
+				<ul class="h-fit pt-14 xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Case Studies</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="cases.html">Our Case Studies</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Areas of Expertise</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">🔥AI & ML</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">FinTech</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Real Estate</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">W-commerce</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">UI UX Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">UX Audit</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UX Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Research</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Product Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">SaaS</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Mobile App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Website Design</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">About Agency</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="story.html">Our Stroy</a>
+							</li>
+							<li class="menu-item">
+								<a href="testimonials.html"
+									>Client's Feedback</a
+								>
+							</li>
+							<li class="menu-item">
+								<a href="mailto:careers@lazarev.com">Careers</a>
+							</li>
+							<li class="menu-item">
+								<a href="news.html">News & Articles</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div
+				id="menu-bg"
+				class="fixed w-full bg-onyx top-0 z-49 after:content-[''] after:absolute after:h-px after:bg-white after:mx-(--sectionGap) after:-bottom-px after:left-0 after:right-0 xl:inline-block"
+			></div>
+		</header>
+
+		<!-- Hero -->
+		<section
+			id="hero"
+			class="flex flex-col h-[90dvh] text-white bg-onyx p-(--sectionGap) justify-between border-b-1 border-b-iridium"
+		>
+			<ul
+				class="flex flex-wrap text-sm tracking-tight font-medium mt-14 items-center gap-1.5 lg:mt-(--sectionGap)"
+			>
+				<li class="flex items-center gap-1.5">
+					<a href="index.html">Home</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="flex items-center gap-1.5">
+					<a href="news.html">News & Articles</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="opacity-60">
+					Lazarev Becomes A Professional Webflow Partner
+				</li>
+			</ul>
+			<h1
+				class="text-[clamp(1.5rem,calc(5.5vw+1rem),10rem)]! leading-[clamp(1rem,calc(4.5vw+1rem),8rem)]! font-semibold"
+			>
+				Lazarev Becomes <br />
+				A Professional <br />
+				Webflow Partner
+			</h1>
+			<div class="sm:flex sm:items-center">
+				<div
+					class="text-sm my-4 sm:w-1/3 sm:order-3 sm:my-0 sm:ms-auto"
+				>
+					<a
+						href="catnews"
+						class="inline-block border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+						>Article</a
+					>
+					<span class="opacity-60"> 4 min read </span>
+				</div>
+				<a
+					href="author.html"
+					class="inline-flex w-full h-16 text-sm p-1.5 items-center border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:w-1/2 sm:px-2.5 xl:w-96"
+				>
+					<img
+						src="assets/image/client-3.jpg"
+						class="size-12 me-2.5 object-cover rounded-full"
+						alt="Author Avatar"
+						loading="lazy"
+					/>
+					<div>
+						<span>Hasibul Islam Tuhin</span>
+						<span class="block opacity-60">CEO & Co-Founder</span>
+					</div>
+					<span class="ms-auto">June 29, 2025</span>
+				</a>
+			</div>
+		</section>
+
+		<section id="news-details" class="text-black bg-white">
+			<div
+				class="parallax h-[60dvh] bg-center bg-cover lg:h-[75dvh]"
+				style="background-image: url(assets/image/news-banner-3.jpg)"
+			></div>
+			<div class="p-(--sectionGap)">
+				<div class="lg:flex lg:justify-between lg:items-start">
+					<div
+						id="news-topics"
+						class="text-sm! lg:sticky lg:w-1/4 lg:top-18 xl:top-24"
+					>
+						<h5 class="uppercase font-semibold mb-4 opacity-60">
+							Topics
+						</h5>
+						<a
+							href="#keytakeaways"
+							class="flex mt-1 lg:opacity-60"
+							data-section="keytakeaways"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								Key Takeaways
+							</p>
+						</a>
+						<a
+							href="#thegrowingroleofcustomerexperienceindigitaltransformation"
+							class="flex mt-1 lg:opacity-60"
+							data-section="thegrowingroleofcustomerexperienceindigitaltransformation"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								The Growing Role of Customer Experience in
+								Digital Transformation
+							</p>
+						</a>
+						<a
+							href="#benefitsofdigitaltransformationforemployees"
+							class="flex mt-1 lg:opacity-60"
+							data-section="benefitsofdigitaltransformationforemployees"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								Benefits of Digital Transformation for Employees
+							</p>
+						</a>
+						<a
+							href="#digitaltransformationbusinessbenefits"
+							class="flex mt-1 lg:opacity-60"
+							data-section="digitaltransformationbusinessbenefits"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								Digital Transformation Business Benefits
+							</p>
+						</a>
+						<a
+							href="#thebroaderimportanceofdigitaltransformation"
+							class="flex mt-1 lg:opacity-60"
+							data-section="thebroaderimportanceofdigitaltransformation"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								The Broader Importance of Digital Transformation
+							</p>
+						</a>
+						<a
+							href="#buildingproductsforbusinessgrowth"
+							class="flex mt-1 lg:opacity-60"
+							data-section="buildingproductsforbusinessgrowth"
+						>
+							<p
+								class="truncate px-3 py-1 border-1 border-zinc-300 rounded-full lg:border-none"
+							>
+								Building Products for Business Growth
+							</p>
+						</a>
+					</div>
+					<div id="news-content" class="lg:basis-2/3">
+						<div class="content">
+							<p>
+								What can $3.9 trillion really achieve? that
+								global spending on digital transformation will
+								reach this figure by 2027. The number signals a
+								fundamental shift in business operations: how
+								companies deliver value, how teams operate, and
+								how every user interaction feels. And it
+								highlights why the benefits of digital
+								transformation now sit at the core of
+								competitive growth.
+							</p>
+							<p>
+								At Lazarev.agency, we turn that ambition into
+								working products. Startups come to us when they
+								need to scale. Enterprises arrive when
+								complexity slows them down. Our role is to
+								expose friction, rebuild product logic, and
+								weave adaptability into each release from day
+								one.
+							</p>
+							<p>
+								Across , and beyond, sharp UX proves its worth:
+								it cuts effort, accelerates decisions, and
+								anchors platforms that grow with their users.
+							</p>
+						</div>
+						<div id="keytakeaways" class="content">
+							<h2 class="font-semibold">Key Takeaways</h2>
+							<ul class="list-disc ps-5">
+								<li>
+									Successful digital transformation boosts
+									efficiency, agility, and resilience, which
+									is essential for adapting to fast-changing
+									markets.
+								</li>
+								<li>
+									It improves employee experience by reducing
+									friction, supporting smarter workflows, and
+									lowering training time.
+								</li>
+								<li>
+									Strong digital systems open new revenue
+									streams, improve retention, and make
+									companies more scalable.
+								</li>
+							</ul>
+						</div>
+						<div
+							id="thegrowingroleofcustomerexperienceindigitaltransformation"
+							class="content"
+						>
+							<h2 class="font-semibold">
+								The Growing Role of Customer Experience in
+								Digital Transformation
+							</h2>
+							<p>
+								A found that 81% of global executives view
+								digital transformation initiatives as a
+								strategic priority, fueled by growing demands
+								for automation, personalization, and
+								cross-platform consistency.
+							</p>
+							<p>
+								True transformation happens when technology
+								mirrors real human behavior aligning with the
+								pace, decisions, and needs people face in actual
+								use.
+							</p>
+							<p>
+								Consider a global fintech handling high-value
+								cross-border payments every day. Their rapid
+								growth came with rising complexity: a wide user
+								base, strict regulatory requirements, and
+								disjointed product experiences. By rethinking
+								their ecosystem through UX, we:
+							</p>
+							<ul class="list-disc ps-5">
+								<li>Reduced friction</li>
+								<li>Clarified journeys</li>
+								<li>
+									Helped teams stay aligned across products
+								</li>
+							</ul>
+							<p>
+								This mindset shift — from deploying digital
+								tools to designing systems around them — is what
+								makes transformation stick. Teams that embed
+								UX-led transformation not only improve
+								performance but also strengthen collaboration
+								and decision-making across departments.
+							</p>
+						</div>
+						<div
+							id="benefitsofdigitaltransformationforemployees"
+							class="content"
+						>
+							<h2 class="font-semibold">
+								Benefits of Digital Transformation for Employees
+							</h2>
+							<p>
+								While customer-facing features often take the
+								spotlight, employees gain just as much from
+								thoughtful digital transformation. When internal
+								tools are designed around real workflows, teams
+								work faster, with fewer errors and greater
+								confidence.
+							</p>
+							<p>
+								A shows that 76% of employees feel more
+								productive when using intuitive technology,
+								while 62% say it makes them feel more valued.
+								These are clear indicators that the benefits of
+								digital transformation for employees extend far
+								beyond automation.
+							</p>
+							<p>
+								<em>
+									“Internal UX keeps systems readable under
+									pressure. It gives teams the clarity to work
+									fast and the stability to work long.”
+								</em>
+							</p>
+							<p>
+								Beyond productivity, the benefits of digital
+								transformation for employees include:
+							</p>
+							<ul class="list-disc ps-5">
+								<li>
+									Clearer communication through unified
+									platforms
+								</li>
+								<li>
+									Tools that adapt to different roles and
+									tasks
+								</li>
+								<li>Faster access to relevant information</li>
+								<li>Better alignment across departments</li>
+							</ul>
+							<p>
+								As work becomes more hybrid and data-driven,
+								these internal gains make transformation both
+								sustainable and scalable.
+							</p>
+						</div>
+						<div
+							id="digitaltransformationbusinessbenefits"
+							class="content"
+						>
+							<h2 class="font-semibold">
+								Digital Transformation Business Benefits
+							</h2>
+							<p>
+								The real wins come when UX helps teams work
+								faster and adapt without friction. A confirms
+								the impact: companies that digitize internal
+								operations can improve earnings before interest,
+								taxes, depreciation and amortization by
+							</p>
+							<p>proves the point:</p>
+							<ul class="list-disc ps-5">
+								<li>
+									<strong
+										>Unified Kanban and List views</strong
+									>
+									cut the learning curve. Teams can switch
+									visual modes without losing context, which
+									speeds onboarding and reduces bounce-outs.
+								</li>
+								<li>
+									<strong
+										>Inline editable project cards</strong
+									>
+									keep progress, deadlines, and status updates
+									in a single place, so managers act in
+									seconds instead of minutes.
+								</li>
+								<li>
+									<strong>Team load-balancing module</strong>
+									lets leaders redistribute tasks on one
+									screen, eliminating bottlenecks and driving
+									steady throughput.
+								</li>
+								<li>
+									<strong>Mobile-first parity</strong>
+									mirrors core desktop flows on phones,
+									keeping productivity high when staff are
+									away from their desks.
+								</li>
+							</ul>
+							<p>
+								Each move removes invisible friction, letting
+								teams ship faster and iterate continuously. When
+								UX clears those micro-obstacles, it stops being
+								surface polish and becomes pure business value.
+							</p>
+						</div>
+						<div
+							id="thebroaderimportanceofdigitaltransformation"
+							class="content"
+						>
+							<h2 class="font-semibold">
+								The Broader Importance of Digital Transformation
+							</h2>
+							<p>
+								A 2024 found that companies with advanced design
+								maturity grow revenue and shareholder returns
+								nearly twice as fast as their competitors. These
+								are the firms where strategy isn’t siloed from
+								execution, and where UX plays a central role in
+								bridging them.
+							</p>
+							<p>
+								Our work with , a civic engagement platform,
+								shows what this looks like in practice. We
+								transformed overwhelming election data into
+								interactive charts, gamified achievements, and a
+								Vote Ready dashboard that nudges citizens toward
+								real participation. A shorter, clearer
+								onboarding flow now keeps new users engaged
+								instead of dropping out.
+							</p>
+							<p>
+								Each move removes invisible friction, letting
+								teams ship faster and iterate continuously. When
+								UX clears those micro-obstacles, it stops being
+								surface polish and becomes pure business value.
+							</p>
+						</div>
+						<div
+							id="buildingproductsforbusinessgrowth"
+							class="content"
+						>
+							<h2 class="font-semibold">
+								Building Products for Business Growth
+							</h2>
+							<p>
+								A 2024 found that companies with advanced design
+								maturity grow revenue and shareholder returns
+								nearly twice as fast as their competitors. These
+								are the firms where strategy isn’t siloed from
+								execution, and where UX plays a central role in
+								bridging them.
+							</p>
+							<p>
+								Our work with , a civic engagement platform,
+								shows what this looks like in practice. We
+								transformed overwhelming election data into
+								interactive charts, gamified achievements, and a
+								Vote Ready dashboard that nudges citizens toward
+								real participation. A shorter, clearer
+								onboarding flow now keeps new users engaged
+								instead of dropping out.
+							</p>
+							<p>
+								digital products that work for your teams, your
+								users, and your business goals.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="text-sm! mt-6">
+					<h5 class="uppercase font-semibold mb-4 opacity-60">
+						Share
+					</h5>
+					<div>
+						<a
+							href="https://www.linkedin.com/in/mhtuhin7001/"
+							class="inline-grid size-8 bg-zinc-200 ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 93.06 93.06"
+								stroke="currentColor"
+								class="size-3.5"
+							>
+								<g>
+									<g>
+										<path
+											d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184
+        c6.166,0,11.176-5.011,11.176-11.184C22.362,5.091,17.351,0.08,11.185,0.08z"
+										/>
+										<rect
+											x="1.538"
+											y="30.926"
+											width="19.287"
+											height="62.054"
+										/>
+										<path
+											d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921v62.053h19.27V62.281
+        c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942
+        C93.06,42.235,89.455,29.383,69.925,29.383z"
+										/>
+									</g>
+								</g>
+							</svg>
+						</a>
+						<a
+							href="https://x.com/mhtuhin7001"
+							class="inline-grid size-8 bg-zinc-200 ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								viewBox="0 0 300 300.251"
+								xmlns="http://www.w3.org/2000/svg"
+								version="1.1"
+								stroke="currentColor"
+								class="size-3.5"
+							>
+								<path
+									d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.facebook.com/mhtuhin7001/"
+							class="inline-grid size-8 bg-zinc-200 ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="-5 0 20 20"
+								stroke="currentColor"
+								class="size-3.5"
+							>
+								<path
+									d="M6.821 20v-9h2.732l.446-4H6.821v-1.948C6.821 4.022 6.847 3 8.287 3h1.458V0.14C9.745.097 8.493 0 7.226 0 4.58 0 2.923 1.657 2.923 4.7V7H0v4h2.923v9h3.898z"
+								/>
+							</svg>
+						</a>
+						<button
+							id="copy-url"
+							class="inline-grid size-8 bg-zinc-200 ms-1 place-items-center rounded-full cursor-pointer focus:bg-zinc-400"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="size-3.5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="text-white bg-onyx p-(--sectionGap) pb-7 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+		>
+			<h1 class="font-semibold sm:col-start-1 sm:col-end-3 lg:col-end-2">
+				The Agency <br />
+				for Impatient Brands®
+			</h1>
+			<div class="mt-7 lg:mt-4">
+				<h6 class="uppercase tracking-tight mb-2 opacity-60">
+					Quick Links
+				</h6>
+				<ul class="">
+					<li class="menu-item">
+						<a href="cases.html">Case Studies</a>
+					</li>
+					<li class="menu-item">
+						<a href="story.html">Our Story</a>
+					</li>
+					<li class="menu-item">
+						<a href="testimonials.html">Client's Feedback</a>
+					</li>
+					<li class="menu-item">
+						<a href="mailto:careers@lazarev.com">Careers</a>
+					</li>
+					<li class="menu-item">
+						<a href="news.html">News & Article</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-7 lg:mt-4">
+				<div>
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Project in Mind?
+					</h6>
+					<a
+						href="mailto:hello@attalika.com"
+						class="relative inline-block mb-2 after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:-bottom-0.5 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+					>
+						<h6>contact@lazarev.com</h6>
+					</a>
+				</div>
+				<div class="mt-4">
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Our Social
+					</h6>
+					<div class="grid grid-cols-2 gap-2.5 xl:grid-cols-3">
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Linkedin</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Facebook</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Instagram</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Dribble</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Behance</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Lenis Script -->
+		<script src="js/lenis.min.js"></script>
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- GSAP SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+
+		<!-- News Details Scrips -->
+		<script>
+			// News Details ScrollSpy
+			document.addEventListener("DOMContentLoaded", () => {
+				document
+					.querySelectorAll("#news-content .content")
+					.forEach((section) => {
+						const id = section.getAttribute("id");
+						ScrollTrigger.create({
+							trigger: section,
+							start: "top center",
+							end: "bottom center",
+							onEnter: () => setActive(id),
+							onEnterBack: () => setActive(id),
+						});
+					});
+				function setActive(id) {
+					document
+						.querySelectorAll("#news-topics a")
+						.forEach((link) => {
+							link.classList.remove(
+								"font-semibold",
+								"lg:opacity-100",
+								"border-s-2",
+								"border-s-black"
+							);
+						});
+					const activeLink = document.querySelector(
+						`#news-topics a[data-section="${id}"]`
+					);
+					if (activeLink) {
+						activeLink.classList.add(
+							"font-semibold",
+							"lg:opacity-100",
+							"border-s-2",
+							"border-s-black"
+						);
+					}
+				}
+			});
+
+			// Copy URL to Clipboard
+			document.addEventListener("DOMContentLoaded", () => {
+				document
+					.getElementById("copy-url")
+					.addEventListener("click", () => {
+						navigator.clipboard.writeText(window.location.href);
+					});
+			});
+		</script>
+	</body>
+</html>

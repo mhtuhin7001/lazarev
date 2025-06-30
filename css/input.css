@@ -179,6 +179,15 @@ nav.pagination a.next {
 	@apply bg-zinc-50;
 }
 
+/* News Details */
+#news-details #news-content h2 {
+	@apply mt-8;
+}
+#news-details #news-content p,
+#news-details #news-content ul {
+	@apply mt-6 lg:me-[30%];
+}
+
 /* Font Face */
 @font-face {
 	font-family: "Gilroy";
