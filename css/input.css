@@ -188,6 +188,20 @@ nav.pagination a.next {
 	@apply mt-6 lg:me-[30%];
 }
 
+/* Awards */
+#awards .award-circle {
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	background: linear-gradient(to left, #3d3d3d, #3d3d3d, #fff 80%, #fff);
+}
+#awards .award-box:first-child .award-circle {
+	background: linear-gradient(to left, #4f5bff, #4f5bff, #fff 80%, #fff);
+}
+#awards .award-box:nth-child(2) .award-circle {
+	background: linear-gradient(to left, #0da34e, #0da34e, #fff 80%, #fff);
+}
+
 /* Font Face */
 @font-face {
 	font-family: "Gilroy";
