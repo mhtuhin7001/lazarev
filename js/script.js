@@ -32,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	new SplitText("#hero-title, #hero-title span, #hero h1", {
 		type: "chars",
 		charsClass: "charParent",
+		reduceWhiteSpace: true,
 	});
 	new SplitText(
 		"#hero-title, #hero-title span, #animated-btn span, #hero h1",
 		{
 			type: "chars",
 			charsClass: "charChild",
+			reduceWhiteSpace: true,
 		}
 	);
 });
