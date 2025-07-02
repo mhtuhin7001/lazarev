@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LAZAREV - Digital Product Design Agency</title>
+		<link
+			rel="shortcut icon"
+			href="assets/image/favicon.gif"
+			type="image/x-icon"
+		/>
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/input.css" />
+	</head>
+	<body class="overflow-hidden font-gilroy">
+		<!-- Loader -->
+		<section id="loader" class="fixed size-full bg-white inset-0 z-100">
+			<div
+				id="loader-path"
+				class="overflow-hidden absolute w-1/3 h-4 bg-onyx mx-auto rounded-2xl inset-x-0 bottom-1/4 z-101"
+			>
+				<div
+					id="loader-bar"
+					class="absolute w-1/2 h-4 bg-shamrockGreen rounded-2xl transition-transform duration-300 ease-in animate-loading"
+				></div>
+			</div>
+		</section>
+
+		<!-- Header -->
+		<header class="text-white">
+			<!-- Header Strip -->
+			<div
+				id="header-strip"
+				class="fixed w-full uppercase flex items-center bg-onyx px-(--sectionGap) py-2.5 top-0 z-50 xl:py-5"
+			>
+				<a href="index.html" class="uppercase font-semibold me-auto">
+					<img
+						src="assets/image/logo.svg"
+						class="h-5"
+						alt="Site Logo"
+						loading="lazy"
+					/>
+					<span class="hidden font-bold text-4xl">Lazarev.</span>
+				</a>
+				<a
+					href="contact.html"
+					class="group relative p-1.5 xl:px-0 xl:py-1.5"
+				>
+					<div
+						class="flex gap-4 items-center after:content-[''] after:absolute after:size-full after:bg-shamrockGreen after:rounded-full after:top-0 after:right-0 after:transition-all after:duration-300 after:-z-1 xl:group-hover:after:w-10"
+					>
+						<span
+							class="hidden font-medium ms-3.5 whitespace-nowrap transition-all duration-300 group-hover:text-shamrockGreen xl:inline-block"
+							>Let's Talk</span
+						>
+						<svg
+							viewBox="-2 -2 24 24"
+							fill="none"
+							class="size-5 xl:me-2.5"
+						>
+							<path
+								class="group-hover:hidden"
+								data-morph="start"
+								d="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+								fill="currentcolor"
+								data-original="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+							></path>
+							<path
+								class="hidden group-hover:inline-block"
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</div>
+				</a>
+				<button
+					id="menu-btn"
+					onclick="menuBtnToggle(this)"
+					class="flex flex-col size-8 bg-iridium ms-1.5 gap-1 justify-center items-center rounded-full cursor-pointer xl:hidden"
+				>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+				</button>
+			</div>
+			<!-- Main Menu  -->
+			<nav
+				id="main-menu"
+				class="overflow-y-scroll fixed h-full bg-onyx px-(--sectionGap) top-0 inset-x-0 -translate-y-full z-49 xl:overflow-y-hidden xl:size-fit xl:bg-transparent xl:mx-auto xl:translate-0 xl:pointer-events-none xl:z-50"
+			>
+				<ul class="h-fit pt-14 xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Case Studies</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="cases.html">Our Case Studies</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Areas of Expertise</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">🔥AI & ML</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">FinTech</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Real Estate</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">W-commerce</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">UI UX Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">UX Audit</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UX Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Research</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Product Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">SaaS</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Mobile App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Website Design</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">About Agency</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="about.html">About Us</a>
+							</li>
+							<li class="menu-item">
+								<a href="testimonials.html"
+									>Client's Feedback</a
+								>
+							</li>
+							<li class="menu-item">
+								<a href="career.html">Careers</a>
+							</li>
+							<li class="menu-item">
+								<a href="news.html">News & Articles</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div
+				id="menu-bg"
+				class="fixed w-full bg-onyx top-0 z-49 after:content-[''] after:absolute after:h-px after:bg-white after:mx-(--sectionGap) after:-bottom-px after:left-0 after:right-0 xl:inline-block"
+			></div>
+		</header>
+
+		<!-- Hero -->
+		<section id="hero" class="bg-onyx p-(--sectionGap) pb-2">
+			<ul
+				class="text-white flex flex-wrap text-sm tracking-tight font-medium mt-14 items-center gap-1.5 lg:mt-(--sectionGap)"
+			>
+				<li class="flex items-center gap-1.5">
+					<a href="index.html">Home</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="opacity-60">Service</li>
+			</ul>
+			<div class="lg:flex lg:min-h-[80dvh] lg:gap-2">
+				<div
+					class="flex flex-col text-black bg-white mt-4 p-6 gap-6 rounded-2xl"
+				>
+					<h2 class="font-semibold mb-auto">
+						Our Decade of Designing UX/UI for AI Products in a
+						Single Page
+					</h2>
+					<span class="text-sm"
+						>If you’re a business with AI <br />
+						product looking to:</span
+					>
+					<ul class="list-disc ps-5">
+						<li
+							class="font-semibold py-1 border-t-1 border-t-zinc-300 first:border-t-0"
+						>
+							Increase revenue through innovative product designs.
+						</li>
+						<li
+							class="font-semibold py-1 border-t-1 border-t-zinc-300 first:border-t-0"
+						>
+							Convert 5 times more website visitors into paying
+							clients.
+						</li>
+						<li
+							class="font-semibold py-1 border-t-1 border-t-zinc-300 first:border-t-0"
+						>
+							Reduce marketing costs and pay less than a cup of
+							coffee for new client retention.
+						</li>
+					</ul>
+					<a
+						id="animated-btn"
+						href="contact.html"
+						class="inline-flex w-full uppercase text-sm font-semibold text-white bg-shamrockGreen mx-auto py-4 justify-center items-center gap-3 rounded-full"
+					>
+						<div class="relative leading-3.5 tracking-tight">
+							<span id="default-text"> Let's Start Now </span>
+							<span id="hover-text" class="absolute inset-0">
+								Let's Start Now
+							</span>
+						</div>
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-5">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</a>
+				</div>
+				<div
+					class="flex flex-col text-white bg-linear-to-br from-onyx to-shamrockGreen mt-2 p-6 gap-3 rounded-2xl"
+				>
+					<h1 class="font-semibold">Service</h1>
+					<h5 class="font-medium">
+						Lazarev+AI will help your AI product build and scale
+						with AI-driven and easy-to-use design. <br />
+						<br />Check the success stories of our clients below.
+					</h5>
+					<a
+						id="animated-btn"
+						href="contact.html"
+						class="inline-flex w-full uppercase text-sm font-semibold text-black bg-white mt-auto mx-auto py-4 justify-center items-center gap-3 rounded-full"
+					>
+						<div class="relative leading-3.5 tracking-tight">
+							<span id="default-text"> Book Strategy Call </span>
+							<span id="hover-text" class="absolute inset-0">
+								Book Strategy Call
+							</span>
+						</div>
+						<svg viewBox="-2 -2 24 24" fill="none" class="size-5">
+							<path
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Show Reel -->
+		<section
+			id="show-reel"
+			class="text-white bg-onyx p-(--sectionGap) pt-0"
+		>
+			<div class="relative h-[60dvh] sm:h-[80dvh]">
+				<div
+					class="absolute grid size-20 bg-white place-items-center rounded-full inset-1/2 -translate-1/2 md:size-36"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="size-6 fill-onyx md:size-8"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</div>
+				<video
+					muted
+					autoplay
+					loop
+					src="assets/media/show-reel-short.mp4"
+					id="short-reel"
+					class="size-full object-cover rounded-2xl cursor-pointer"
+				></video>
+				<div>
+					<span
+						id="reel-close"
+						class="fixed hidden text-sm font-semibold mix-blend-difference inset-0 pointer-events-none z-52"
+						>Close Reel</span
+					>
+					<video
+						muted
+						src="assets/media/show-reel-full.mp4"
+						id="full-reel"
+						class="fixed w-3/4 h-0 object-cover mx-auto rounded-2xl inset-x-0 bottom-1/4 cursor-pointer z-51"
+					></video>
+					<div
+						id="reel-controls"
+						class="fixed overflow-hidden w-0 mx-auto flex justify-between items-center inset-x-0 bottom-10 z-52"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							id="reel-play-pause"
+							class="size-5 cursor-pointer"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						<input
+							type="range"
+							id="reel-progress"
+							class="basis-full h-1 mx-2.5 bg-gray-400 accent-shamrockGreen cursor-pointer"
+							value="0"
+							min="0"
+							step="0.1"
+						/>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							id="reel-mute-unmute"
+							class="size-5 cursor-pointer"
+						>
+							<path
+								d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"
+							/>
+							<path
+								d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div
+				id="service-advertise"
+				class="sm:grid sm:grid-cols-2 sm:mt-2 sm:gap-2 xl:grid-cols-3"
+			>
+				<div
+					class="advertise relative flex flex-col bg-eerieBlack mt-2 p-6 pt-28 justify-end rounded-2xl before:absolute before:text-sm before:top-6 before:left-6 before:opacity-60 sm:mt-0"
+				>
+					<h1 class="font-semibold mb-3">$500M+</h1>
+					<p class="opacity-60">
+						in funding secured <br />
+						for our clients
+					</p>
+				</div>
+				<div
+					class="advertise relative flex flex-col bg-eerieBlack mt-2 p-6 pt-28 justify-end rounded-2xl before:absolute before:text-sm before:top-6 before:left-6 before:opacity-60 sm:mt-0"
+				>
+					<h1 class="font-semibold mb-3">120+</h1>
+					<p class="opacity-60">
+						Awards backing <br />
+						our excellence
+					</p>
+				</div>
+				<div
+					class="advertise relative flex flex-col bg-eerieBlack mt-2 p-6 pt-28 justify-end rounded-2xl before:absolute before:text-sm before:top-6 before:left-6 before:opacity-60 sm:col-start-1 sm:col-end-3 sm:mt-0 xl:col-start-3 xl:col-end-4"
+				>
+					<h1 class="font-semibold mb-3">We Are<br />Recognised</h1>
+					<p class="opacity-60">
+						By: Forbes, Yahoo, <br />
+						Fast company, .INC
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Service Details -->
+		<section id="service-details" class="text-white bg-onyx">
+			<div class="p-(--sectionGap) lg:flex lg:flex-wrap">
+				<div class="lg:basis-full">
+					<h2 class="font-semibold">AI UX Design for VT News</h2>
+					<h5 class="font-medium mt-3">
+						A news portal that provides users with access to diverse
+						perspectives on events and supports critical thinking
+						and objective evaluation of information. Using
+						artificial intelligence, it helps users quickly analyze
+						and explore topics in depth.
+					</h5>
+				</div>
+				<div class="my-6 border-t-1 border-t-iridium lg:basis-2/3">
+					<h6 class="font-medium my-3">Key insights into AI+News:</h6>
+					<div id="detail-lists" class="lg:me-[30%]">
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							Created a news portal that provides access to
+							diverse perspectives, helping users quickly analyze
+							and explore topics using artificial intelligence.
+						</p>
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							Deep research to understand user behavior and
+							preferences in news consumption, enabled us to
+							develop a strategy for integrating advanced
+							artificial intelligence algorithms aimed at helping
+							users quickly access specific information,
+							prioritizing content based on user interests and
+							current topics.
+						</p>
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							A unique way to study a topic in the form of a
+							timeline, an interactive graph allows you to track
+							publication bursts and analyze what preceded it.
+							Artificial intelligence offers options for the
+							development of events
+						</p>
+					</div>
+				</div>
+				<div
+					class="flex my-6 py-3 justify-between items-end border-t-1 border-t-iridium lg:basis-1/3 lg:border-s-1 lg:border-s-iridium"
+				>
+					<h6 class="font-medium lg:ms-6">Swipe left to view more</h6>
+					<svg
+						viewBox="0 0 50 20"
+						fill="none"
+						class="w-12 bg-shamrockGreen mb-1 px-2 py-1 rounded-full"
+					>
+						<path
+							class="u-scroll-arrow-i1"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M39.5859 10.0001L35.293 5.70718L36.7072 4.29297L42.4143 10.0001L36.7072 15.7072L35.293 14.293L39.5859 10.0001Z"
+							fill="white"
+						></path>
+						<path
+							class="u-scroll-arrow-i2"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M27.0859 10.0001L22.793 5.70718L24.2072 4.29297L29.9143 10.0001L24.2072 15.7072L22.793 14.293L27.0859 10.0001Z"
+							fill="white"
+						></path>
+						<path
+							class="u-scroll-arrow-i3"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M14.5859 10.0001L10.293 5.70718L11.7072 4.29297L17.4143 10.0001L11.7072 15.7072L10.293 14.293L14.5859 10.0001Z"
+							fill="white"
+						></path>
+					</svg>
+				</div>
+				<div class="overflow-hidden w-dvw -mx-(--sectionGap)">
+					<div class="service-slider flex w-max">
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-1.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-2.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-3.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-(--sectionGap) lg:flex lg:flex-wrap">
+				<div class="lg:basis-full">
+					<h2 class="font-semibold">
+						AI UX Designer for Fintech. 2017-2024
+					</h2>
+					<h5 class="font-medium mt-3">
+						Accern helps financial firms automate research and
+						classify content for AI models. They needed a full UX
+						and UI revamp, so we created their design from scratch,
+						which delivered $40M over 7 years.
+					</h5>
+				</div>
+				<div class="my-6 border-t-1 border-t-iridium lg:basis-2/3">
+					<h6 class="font-medium my-3">
+						Key insights into AI+Fintech:
+					</h6>
+					<div id="detail-lists" class="lg:me-[30%]">
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							Users often struggle to organize data from financial
+							research. That’s why we always add a “cluster” tool
+							to gather information in a single place for easy
+							access.
+						</p>
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							If you’re building a chat-based interface, make sure
+							you use AI to predict and suggest prompts for easy
+							UX.
+						</p>
+						<p
+							class="relative opacity-60 mt-3 ps-10 before:absolute before:font-semibold before:text-yellow-400 before:bg-[#fccf554d] before:px-2 before:rounded-full before:top-0 before:left-0"
+						>
+							Users often miss AI products' value due to
+							hard-to-read documentation and irrelevant tutorials.
+							Instead, use an AI chatbot that offers solutions
+							based on user tasks in real time.
+						</p>
+					</div>
+				</div>
+				<div
+					class="flex my-6 py-3 justify-between items-end border-t-1 border-t-iridium lg:basis-1/3 lg:border-s-1 lg:border-s-iridium"
+				>
+					<h6 class="font-medium lg:ms-6">Swipe left to view more</h6>
+					<svg
+						viewBox="0 0 50 20"
+						fill="none"
+						class="w-12 bg-shamrockGreen mb-1 px-2 py-1 rounded-full"
+					>
+						<path
+							class="u-scroll-arrow-i1"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M39.5859 10.0001L35.293 5.70718L36.7072 4.29297L42.4143 10.0001L36.7072 15.7072L35.293 14.293L39.5859 10.0001Z"
+							fill="white"
+						></path>
+						<path
+							class="u-scroll-arrow-i2"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M27.0859 10.0001L22.793 5.70718L24.2072 4.29297L29.9143 10.0001L24.2072 15.7072L22.793 14.293L27.0859 10.0001Z"
+							fill="white"
+						></path>
+						<path
+							class="u-scroll-arrow-i3"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M14.5859 10.0001L10.293 5.70718L11.7072 4.29297L17.4143 10.0001L11.7072 15.7072L10.293 14.293L14.5859 10.0001Z"
+							fill="white"
+						></path>
+					</svg>
+				</div>
+				<div class="overflow-hidden w-dvw -mx-(--sectionGap)">
+					<div class="service-slider flex w-max">
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-4.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-5.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+						<div
+							class="w-dvw h-[60dvh] me-2 rounded-2xl first:ms-(--sectionGap) lg:h-[80dvh]"
+						>
+							<img
+								src="assets/image/service-6.jpg"
+								class="size-full object-cover rounded-2xl"
+								alt="Service Image"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Jump to -->
+		<section
+			id="jump-to"
+			class="parallax text-white bg-center bg-cover p-(--sectionGap) lg:h-[90dvh]"
+			style="background-image: url(assets/image/jump-to-bg.jpg)"
+		>
+			<a
+				href="contact.html"
+				class="relative size-full inline-flex flex-col gap-7 lg:flex-row"
+			>
+				<div
+					id="jump-to-cursor"
+					class="absolute size-36 flex flex-col bg-shamrockGreen justify-between px-6 pt-5 pb-7 rounded-full inset-0 scale-0 opacity-0 z-10"
+				>
+					<svg
+						viewBox="-2 -2 24 24"
+						fill="none"
+						class="self-end size-4"
+					>
+						<path
+							data-morph="end"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+							fill="currentcolor"
+						></path>
+					</svg>
+					<span class="uppercase text-sm font-bold leading-3.5"
+						>Contact Us</span
+					>
+				</div>
+				<svg
+					viewBox="-2 -2 24 24"
+					fill="none"
+					class="absolute size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] top-1/12 right-1/6"
+				>
+					<path
+						data-morph="end"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+						fill="currentcolor"
+					></path>
+				</svg>
+				<h1
+					class="uppercase text-hero! leading-(--heroTexlLeading)! font-bold lg:basis-2/3"
+				>
+					Have a <br />
+					Project <br />
+					in Mind?
+				</h1>
+				<h5 class="lg:basis-1/3 lg:self-end">
+					Share your project idea with us! Should the partnership vibe
+					not align, we're glad to furnish you with valuable insights
+					that could prove beneficial.
+				</h5>
+			</a>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="text-white bg-onyx p-(--sectionGap) pb-7 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+		>
+			<h1 class="font-semibold sm:col-start-1 sm:col-end-3 lg:col-end-2">
+				The Agency <br />
+				for Impatient Brands®
+			</h1>
+			<div class="mt-7 lg:mt-4">
+				<h6 class="uppercase tracking-tight mb-2 opacity-60">
+					Quick Links
+				</h6>
+				<ul class="">
+					<li class="menu-item">
+						<a href="cases.html">Case Studies</a>
+					</li>
+					<li class="menu-item">
+						<a href="about.html">About Us</a>
+					</li>
+					<li class="menu-item">
+						<a href="testimonials.html">Client's Feedback</a>
+					</li>
+					<li class="menu-item">
+						<a href="career.html">Careers</a>
+					</li>
+					<li class="menu-item">
+						<a href="news.html">News & Article</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-7 lg:mt-4">
+				<div>
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Project in Mind?
+					</h6>
+					<a
+						href="mailto:hello@attalika.com"
+						class="relative inline-block mb-2 after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:-bottom-0.5 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+					>
+						<h6>contact@lazarev.com</h6>
+					</a>
+				</div>
+				<div class="mt-4">
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Our Social
+					</h6>
+					<div class="grid grid-cols-2 gap-2.5 xl:grid-cols-3">
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Linkedin</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Facebook</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Instagram</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Dribble</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Behance</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Copyright -->
+		<section
+			class="text-center text-white bg-onyx px-(--sectionGap) py-3.5 border-t-1 border-t-iridium md:flex md:justify-between"
+		>
+			<span class="block text-sm font-semibold tracking-tight"
+				>Lazarev. — AI + Product Design Agency.</span
+			>
+			<span class="block text-sm font-semibold tracking-tight"
+				>All Rights Reserved 2025</span
+			>
+		</section>
+
+		<!-- Lenis Script -->
+		<script src="js/lenis.min.js"></script>
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- GSAP SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
+		<!-- GSAP Draggable Script -->
+		<script src="js/Draggable.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+
+		<!-- Service Scripts -->
+		<script>
+			gsap.registerPlugin(Draggable);
+			// Service Img Slider
+			document.addEventListener("DOMContentLoaded", () => {
+				const sliders = document.querySelectorAll(".service-slider");
+				sliders.forEach((slider) => {
+					const slides = slider.children;
+					const slideWidth = slides[0].offsetWidth;
+					const maxX = -(slideWidth * (slides.length - 1));
+					Draggable.create(slider, {
+						type: "x",
+						inertia: true,
+						bounds: { minX: maxX, maxX: 0 },
+						snap: (x) => Math.round(x / slideWidth) * slideWidth,
+						onDrag: function () {
+							if (this.x > 0) this.endDrag();
+						},
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

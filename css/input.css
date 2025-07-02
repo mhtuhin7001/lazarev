@@ -145,12 +145,15 @@ nav.pagination a.next {
 #advertise,
 #success-stories #success,
 #design-process ol,
-#client-reviews {
+#client-reviews,
+#service-advertise,
+#detail-lists {
 	counter-reset: customList;
 }
 #advertise .advertise-box .advertise-inner::before,
 #success-stories #success div::before,
-#client-reviews .client-review::before {
+#client-reviews .client-review::before,
+#service-advertise .advertise::before {
 	content: "/0" counter(customList);
 	counter-increment: customList;
 }
@@ -164,6 +167,12 @@ nav.pagination a.next {
 /* Design Process */
 #design-process ol li::before {
 	content: counter(customList);
+	counter-increment: customList;
+}
+
+/* Service Details */
+#detail-lists p::before {
+	content: "#" counter(customList);
 	counter-increment: customList;
 }
 
