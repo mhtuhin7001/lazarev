@@ -19,27 +19,31 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 // Initialize SplitText
 document.addEventListener("DOMContentLoaded", () => {
 	// Line Split
-	new SplitText("#hero-home p", {
+	new SplitText("#hero-home p, #ceo h3", {
 		type: "lines",
 		linesClass: "lineChild",
 	});
-	new SplitText("#hero-home p", {
+	new SplitText("#hero-home p, #ceo h3", {
 		type: "lines",
 		linesClass: "lineParent",
+	});
+
+	// Word Split
+	new SplitText("#about h1", {
+		type: "words",
+		wordsClass: "wordChild",
 	});
 
 	// Letter Split
 	new SplitText("#hero-title, #hero-title span, #hero h1", {
 		type: "chars",
 		charsClass: "charParent",
-		reduceWhiteSpace: true,
 	});
 	new SplitText(
 		"#hero-title, #hero-title span, #animated-btn span, #hero h1",
 		{
 			type: "chars",
 			charsClass: "charChild",
-			reduceWhiteSpace: true,
 		}
 	);
 });

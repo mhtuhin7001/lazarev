@@ -74,7 +74,7 @@ html.lenis body {
 /* SplitText Animation */
 .lineParent,
 .charParent {
-	@apply overflow-hidden max-w-max mx-auto;
+	@apply overflow-hidden max-w-max;
 }
 
 /* On Hove Animated Button */
@@ -131,6 +131,9 @@ nav.pagination a.next {
 }
 
 /* Hero Home */
+#hero-home p .lineParent {
+	@apply mx-auto;
+}
 #hero-home #hero-title span {
 	@apply inline-flex items-center whitespace-nowrap;
 }

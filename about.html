@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About - LAZAREV</title>
+		<link
+			rel="shortcut icon"
+			href="assets/image/favicon.gif"
+			type="image/x-icon"
+		/>
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/input.css" />
+	</head>
+	<body class="overflow-hidden font-gilroy">
+		<!-- Loader -->
+		<section id="loader" class="fixed size-full bg-white inset-0 z-100">
+			<div
+				id="loader-path"
+				class="overflow-hidden absolute w-1/3 h-4 bg-onyx mx-auto rounded-2xl inset-x-0 bottom-1/4 z-101"
+			>
+				<div
+					id="loader-bar"
+					class="absolute w-1/2 h-4 bg-shamrockGreen rounded-2xl transition-transform duration-300 ease-in animate-loading"
+				></div>
+			</div>
+		</section>
+
+		<!-- Header -->
+		<header class="text-white">
+			<!-- Header Strip -->
+			<div
+				id="header-strip"
+				class="fixed w-full uppercase flex items-center bg-onyx px-(--sectionGap) py-2.5 top-0 z-50 xl:py-5"
+			>
+				<a href="index.html" class="uppercase font-semibold me-auto">
+					<img
+						src="assets/image/logo.svg"
+						class="h-5"
+						alt="Site Logo"
+						loading="lazy"
+					/>
+					<span class="hidden font-bold text-4xl">Lazarev.</span>
+				</a>
+				<a
+					href="contact.html"
+					class="group relative p-1.5 xl:px-0 xl:py-1.5"
+				>
+					<div
+						class="flex gap-4 items-center after:content-[''] after:absolute after:size-full after:bg-shamrockGreen after:rounded-full after:top-0 after:right-0 after:transition-all after:duration-300 after:-z-1 xl:group-hover:after:w-10"
+					>
+						<span
+							class="hidden font-medium ms-3.5 whitespace-nowrap transition-all duration-300 group-hover:text-shamrockGreen xl:inline-block"
+							>Let's Talk</span
+						>
+						<svg
+							viewBox="-2 -2 24 24"
+							fill="none"
+							class="size-5 xl:me-2.5"
+						>
+							<path
+								class="group-hover:hidden"
+								data-morph="start"
+								d="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+								fill="currentcolor"
+								data-original="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+							></path>
+							<path
+								class="hidden group-hover:inline-block"
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</div>
+				</a>
+				<button
+					id="menu-btn"
+					onclick="menuBtnToggle(this)"
+					class="flex flex-col size-8 bg-iridium ms-1.5 gap-1 justify-center items-center rounded-full cursor-pointer xl:hidden"
+				>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+				</button>
+			</div>
+			<!-- Main Menu  -->
+			<nav
+				id="main-menu"
+				class="overflow-y-scroll fixed h-full bg-onyx px-(--sectionGap) top-0 inset-x-0 -translate-y-full z-49 xl:overflow-y-hidden xl:size-fit xl:bg-transparent xl:mx-auto xl:translate-0 xl:pointer-events-none xl:z-50"
+			>
+				<ul class="h-fit pt-14 xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Case Studies</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="cases.html">Our Case Studies</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Areas of Expertise</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">🔥AI & ML</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">FinTech</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Real Estate</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">W-commerce</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">UI UX Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">UX Audit</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UX Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Research</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Product Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">SaaS</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Mobile App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Website Design</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">About Agency</a>
+						<ul class="sub-menu">
+							<li class="menu-item current-menu-item">
+								<a href="about.html">About Us</a>
+							</li>
+							<li class="menu-item">
+								<a href="testimonials.html"
+									>Client's Feedback</a
+								>
+							</li>
+							<li class="menu-item">
+								<a href="career.html">Careers</a>
+							</li>
+							<li class="menu-item current-menu-item">
+								<a href="news.html">News & Articles</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div
+				id="menu-bg"
+				class="fixed w-full bg-onyx top-0 z-49 after:content-[''] after:absolute after:h-px after:bg-white after:mx-(--sectionGap) after:-bottom-px after:left-0 after:right-0 xl:inline-block"
+			></div>
+		</header>
+
+		<!-- Hero -->
+		<section
+			id="hero"
+			class="flex flex-col h-[60dvh] text-white bg-onyx p-(--sectionGap) justify-between border-b-1 border-b-iridium sm:h-[80dvh]"
+		>
+			<ul
+				class="flex flex-wrap text-sm tracking-tight font-medium mt-14 items-center gap-1.5 lg:mt-(--sectionGap)"
+			>
+				<li class="flex items-center gap-1.5">
+					<a href="index.html">Home</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="opacity-60">About Us</li>
+			</ul>
+			<h1
+				class="uppercase text-hero! leading-(--heroTexlLeading)! font-bold"
+			>
+				About Us
+			</h1>
+		</section>
+
+		<!-- About -->
+		<section
+			id="about"
+			class="text-white bg-onyx p-(--sectionGap) lg:flex lg:flex-wrap lg:items-start"
+		>
+			<div class="lg:sticky lg:basis-1/4 lg:top-14 xl:top-20">
+				<img
+					src="assets/image/logo-round.png"
+					id="round-logo"
+					alt="Site Logo"
+					loading="lazy"
+				/>
+			</div>
+			<h1 class="font-semibold text-eerieBlack lg:basis-3/4">
+				We work with bold organizations that are not afraid of taking
+				the road less traveled - from Series A, B, and C startups to
+				global giants renowned across the world.
+			</h1>
+			<div
+				id="clients"
+				class="overflow-hidden relative mt-(--sectionGap) whitespace-nowrap before:content-[''] before:absolute before:w-1/3 before:h-full before:bg-gradient-to-l before:from-transparent before:to-onyx before:z-10 before:left-0 after:content-[''] after:absolute after:w-1/3 after:h-full after:bg-gradient-to-r after:from-transparent after:to-onyx after:z-10 after:right-0 lg:basis-3/4 lg:ms-auto"
+			>
+				<div
+					class="client-logos inline-flex items-center gap-5 me-5 animate-marquee"
+				>
+					<img
+						src="assets/image/client-logo-1.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-2.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-3.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-4.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-5.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-6.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-7.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-8.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+					<img
+						src="assets/image/client-logo-9.png"
+						class="h-5"
+						alt="Client Logo"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Show Reel -->
+		<section
+			id="show-reel"
+			class="relative h-[60dvh] text-white bg-onyx p-(--sectionGap) sm:h-dvh"
+		>
+			<div
+				class="absolute grid size-20 bg-white place-items-center rounded-full inset-1/2 -translate-1/2 md:size-36"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="size-6 fill-onyx md:size-8"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</div>
+			<video
+				muted
+				autoplay
+				loop
+				src="assets/media/show-reel-short.mp4"
+				id="short-reel"
+				class="size-full object-cover rounded-2xl cursor-pointer"
+			></video>
+			<div>
+				<span
+					id="reel-close"
+					class="fixed hidden text-sm font-semibold mix-blend-difference inset-0 pointer-events-none z-52"
+					>Close Reel</span
+				>
+				<video
+					muted
+					src="assets/media/show-reel-full.mp4"
+					id="full-reel"
+					class="fixed w-3/4 h-0 object-cover mx-auto rounded-2xl inset-x-0 bottom-1/4 cursor-pointer z-51"
+				></video>
+				<div
+					id="reel-controls"
+					class="fixed overflow-hidden w-0 mx-auto flex justify-between items-center inset-x-0 bottom-10 z-52"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+						id="reel-play-pause"
+						class="size-5 cursor-pointer"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+					<input
+						type="range"
+						id="reel-progress"
+						class="basis-full h-1 mx-2.5 bg-gray-400 accent-shamrockGreen cursor-pointer"
+						value="0"
+						min="0"
+						step="0.1"
+					/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+						id="reel-mute-unmute"
+						class="size-5 cursor-pointer"
+					>
+						<path
+							d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"
+						/>
+						<path
+							d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z"
+						/>
+					</svg>
+				</div>
+			</div>
+		</section>
+
+		<!-- Members -->
+		<section id="members" class="text-white bg-onyx">
+			<div
+				class="p-(--sectionGap) lg:flex lg:flex-wrap lg:justify-between"
+			>
+				<h2 class="font-semibold lg:basis-2/3 lg:order-2">
+					Our People <br />
+					behind your <br />
+					products
+				</h2>
+				<p class="mt-3 opacity-60 lg:basis-1/4 lg:self-end">
+					While results are what matter most, we believe that awards
+					act as megaphones, amplifying our clients' voices to
+					resonate across the globe.
+				</p>
+				<div
+					class="grid grid-cols-2 mt-6 border-b-1 border-b-iridium md:grid-cols-3 lg:basis-2/3 lg:order-3 lg:mt-(--sectionGap) lg:ms-auto"
+				>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto">
+							<img
+								src="assets/image/news-author-1.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/news-author-2.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/client-1.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/client-2.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/client-3.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+						</div>
+						<h1 class="font-medium mt-16 sm:mt-20">40+</h1>
+						<span class="text-sm mt-4">Creative Talents</span>
+					</div>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto">
+							<img
+								src="assets/image/award-1.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/award-2.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/award-3.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/award-4.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/award-5.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+						</div>
+						<h1 class="font-medium mt-16 sm:mt-20">120+</h1>
+						<span class="text-sm mt-4">International Awards</span>
+					</div>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto">
+							<img
+								src="assets/image/cat-1.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+							<img
+								src="assets/image/cat-2.jpg"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+						</div>
+						<h1 class="font-medium mt-16 sm:mt-20">2</h1>
+						<span class="text-sm mt-4">Cat pe Empolyee</span>
+					</div>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto">
+							<img
+								src="assets/image/country.png"
+								class="size-9 bg-onyx border-3 border-onyx rounded-full nth-[2]:-translate-x-4 nth-[3]:-translate-x-8 nth-[4]:-translate-x-12 nth-[5]:-translate-x-16"
+								alt="Members Avatar"
+								loading="lazy"
+							/>
+						</div>
+						<h1 class="font-medium mt-16 sm:mt-20">UA</h1>
+						<span class="text-sm mt-4"
+							>Working globally, born in Ukraine</span
+						>
+					</div>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto"></div>
+						<h1 class="font-medium mt-16 sm:mt-20">2015</h1>
+						<span class="text-sm mt-4">Founded</span>
+					</div>
+					<div
+						class="flex flex-col p-4 border-1 border-iridium border-b-0 odd:border-s-0 even:border-x-0 md:border-s-0 md:even:border-e-1 md:nth-[3n]:border-e-0"
+					>
+						<div class="flex mb-auto"></div>
+						<h1 class="font-medium mt-16 sm:mt-20">100%</h1>
+						<span class="text-sm mt-4">In-House & Independent</span>
+					</div>
+				</div>
+			</div>
+			<div
+				class="parallax h-[60dvh] bg-center bg-cover md:h-dvh lg:basis-full lg:order-4"
+				style="background-image: url(assets/image/members.jpg)"
+			></div>
+		</section>
+
+		<!-- Awards -->
+		<section
+			id="awards"
+			class="overflow-hidden text-black bg-white p-(--sectionGap)"
+		>
+			<div class="lg:flex lg:justify-between">
+				<span class="text-sm opacity-60 lg:basis-1/4"
+					>Awards <br />
+					& Recognition</span
+				>
+				<h2 class="font-semibold lg:basis-3/4">
+					Our team’s work was honored with most of the world-known
+					trophies
+				</h2>
+			</div>
+			<div
+				id="awards-box-circle"
+				class="grid grid-cols-2 my-6 gap-4 sm:grid-cols-3 lg:w-3/4 lg:ms-auto"
+			>
+				<div
+					class="award-box relative flex flex-col text-center justify-center items-center gap-1 aspect-square"
+				>
+					<h1 class="font-semibold">120+</h1>
+					<p class="opacity-60">Awards won all time</p>
+					<div
+						class="award-circle absolute size-full p-px rounded-full inset-0 -rotate-45"
+					></div>
+				</div>
+				<div
+					class="award-box relative flex flex-col text-center justify-center items-center gap-1 aspect-square"
+				>
+					<img
+						src="assets/image/award-1.png"
+						class="h-[clamp(1.5rem,calc(3vw+1rem),5rem)]"
+						alt="Award Logo"
+						loading="lazy"
+					/>
+					<h6 class="uppercase tracking-tight font-bold">
+						CSS Design
+					</h6>
+					<p class="opacity-60">Website of the year</p>
+					<div
+						class="award-circle absolute size-full p-px rounded-full inset-0 -rotate-45"
+					></div>
+				</div>
+				<div
+					class="award-box relative flex flex-col text-center justify-center items-center gap-1 aspect-square"
+				>
+					<img
+						src="assets/image/award-2.png"
+						class="h-[clamp(1.5rem,calc(3vw+1rem),5rem)]"
+						alt="Award Logo"
+						loading="lazy"
+					/>
+					<h6 class="uppercase tracking-tight font-bold">Awwwards</h6>
+					<p class="opacity-60">Site of the year nominee</p>
+					<div
+						class="award-circle absolute size-full p-px rounded-full inset-0 -rotate-45"
+					></div>
+				</div>
+			</div>
+			<div
+				class="grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8"
+			>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-3.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">The Webby Awards</p>
+				</div>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-4.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">The FWA</p>
+				</div>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-2.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">Awwwards</p>
+				</div>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-5.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">Red Dot Awards</p>
+				</div>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-6.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">Behance</p>
+				</div>
+				<div
+					class="flex flex-col text-center bg-zinc-300 p-4 justify-center items-center rounded-lg aspect-square"
+				>
+					<img
+						src="assets/image/award-7.png"
+						alt="Award Logo"
+						class="h-[clamp(1rem,calc(2vw+1rem),3rem)] my-auto"
+						loading="lazy"
+					/>
+					<p class="opacity-60">The Drum Awards</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- CEO -->
+		<section
+			id="ceo"
+			class="text-black bg-white p-(--sectionGap) lg:flex lg:justify-between"
+		>
+			<h3 class="font-medium mb-6 lg:basis-2/3 lg:order-2">
+				<svg
+					fill="#000000"
+					viewBox="0 0 42 33"
+					class="size-7 inline-block -mt-8 me-3"
+				>
+					<path
+						d="M24.635 33V18.84c0-5.12 1.6-9.2 4.8-12.24 3.28-3.12 7.16-5.04 11.64-5.76v5.64c-2.16.72-4.08 2.04-5.76 3.96-1.6 1.92-2.4 4.24-2.4 6.96h7.92V33h-16.2ZM.875 33V18.84c0-5.12 1.6-9.2 4.8-12.24 3.28-3.12 7.16-5.04 11.64-5.76v5.64c-2.16.72-4.08 2.04-5.76 3.96-1.6 1.92-2.4 4.24-2.4 6.96h7.92V33H.875Z"
+					></path>
+				</svg>
+				At 21, I wanted to start my own business, but I didn't have a
+				clue about entrepre-neurship. Picture a time when
+				entrepreneurship tutorials were rarer than unicorns. I had two
+				options: Quit or think of another way to learn about business.
+				Choosing the latter led me to website design. It was a perfect
+				combo to learn from entrepreneurs first-hand and make money.
+			</h3>
+			<div class="lg:basis-1/4">
+				<img
+					src="assets/image/ceo.jpg"
+					class="mb-3"
+					alt="CEO Avatar"
+					loading="lazy"
+				/>
+				<span class="font-semibold opacity-60">CEO</span>
+				<h5 class="font-semibold">Kyrylo Lazarev</h5>
+			</div>
+		</section>
+
+		<!-- Jump to -->
+		<section
+			id="jump-to"
+			class="parallax text-white bg-center bg-cover p-(--sectionGap) lg:h-[90dvh]"
+			style="background-image: url(assets/image/jump-to-bg.jpg)"
+		>
+			<a
+				href="contact.html"
+				class="relative size-full inline-flex flex-col gap-7 lg:flex-row"
+			>
+				<div
+					id="jump-to-cursor"
+					class="absolute size-36 flex flex-col bg-shamrockGreen justify-between px-6 pt-5 pb-7 rounded-full inset-0 scale-0 opacity-0 z-10"
+				>
+					<svg
+						viewBox="-2 -2 24 24"
+						fill="none"
+						class="self-end size-4"
+					>
+						<path
+							data-morph="end"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+							fill="currentcolor"
+						></path>
+					</svg>
+					<span class="uppercase text-sm font-bold leading-3.5"
+						>Contact Us</span
+					>
+				</div>
+				<svg
+					viewBox="-2 -2 24 24"
+					fill="none"
+					class="absolute size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] top-1/12 right-1/6"
+				>
+					<path
+						data-morph="end"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+						fill="currentcolor"
+					></path>
+				</svg>
+				<h1
+					class="uppercase text-hero! leading-(--heroTexlLeading)! font-bold lg:basis-2/3"
+				>
+					Have a <br />
+					Project <br />
+					in Mind?
+				</h1>
+				<h5 class="lg:basis-1/3 lg:self-end">
+					Share your project idea with us! Should the partnership vibe
+					not align, we're glad to furnish you with valuable insights
+					that could prove beneficial.
+				</h5>
+			</a>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="text-white bg-onyx p-(--sectionGap) pb-7 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+		>
+			<h1 class="font-semibold sm:col-start-1 sm:col-end-3 lg:col-end-2">
+				The Agency <br />
+				for Impatient Brands®
+			</h1>
+			<div class="mt-7 lg:mt-4">
+				<h6 class="uppercase tracking-tight mb-2 opacity-60">
+					Quick Links
+				</h6>
+				<ul class="">
+					<li class="menu-item">
+						<a href="cases.html">Case Studies</a>
+					</li>
+					<li class="menu-item">
+						<a href="about.html">About Us</a>
+					</li>
+					<li class="menu-item">
+						<a href="testimonials.html">Client's Feedback</a>
+					</li>
+					<li class="menu-item">
+						<a href="career.html">Careers</a>
+					</li>
+					<li class="menu-item">
+						<a href="news.html">News & Article</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-7 lg:mt-4">
+				<div>
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Project in Mind?
+					</h6>
+					<a
+						href="mailto:hello@attalika.com"
+						class="relative inline-block mb-2 after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:-bottom-0.5 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+					>
+						<h6>contact@lazarev.com</h6>
+					</a>
+				</div>
+				<div class="mt-4">
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Our Social
+					</h6>
+					<div class="grid grid-cols-2 gap-2.5 xl:grid-cols-3">
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Linkedin</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Facebook</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Instagram</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Dribble</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Behance</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Lenis Script -->
+		<script src="js/lenis.min.js"></script>
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- GSAP SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+
+		<!-- About Scripts -->
+		<script>
+			// About Section
+			document.addEventListener("DOMContentLoaded", () => {
+				// Round Logo
+				gsap.to("#round-logo", {
+					rotate: 360,
+					scrollTrigger: {
+						trigger: "#about",
+						scrub: true,
+					},
+				});
+
+				// Text Reveal
+				gsap.to("#about h1 .wordChild", {
+					color: "#ffffff",
+					duration: 4,
+					stagger: 2,
+					scrollTrigger: {
+						trigger: "#about #round-logo",
+						scrub: true,
+					},
+				});
+
+				// Clients Image Clone
+				const wrapper = document.getElementById("clients");
+				const original = document.querySelector(
+					"#clients .client-logos"
+				);
+				const screenWidth = window.innerWidth;
+				let totalWidth = original.offsetWidth;
+				// Clone and append until total width exceeds screen width
+				while (totalWidth < screenWidth) {
+					const clone = original.cloneNode(true);
+					wrapper.appendChild(clone);
+					totalWidth += clone.offsetWidth;
+				}
+			});
+
+			// Awards Circle
+			document.addEventListener("DOMContentLoaded", () => {
+				gsap.from("#awards-box-circle .award-circle", {
+					rotate: 90,
+					duration: 0.9,
+					scrollTrigger: {
+						trigger: "#awards-box-circle",
+						end: "top 20%",
+						scrub: 4,
+					},
+				});
+			});
+
+			// CEO Line Reavel
+			document.addEventListener("DOMContentLoaded", () => {
+				gsap.fromTo(
+					"#ceo h3 .lineChild",
+					{ yPercent: 100, opacity: 0 },
+					{
+						yPercent: 0,
+						opacity: 1,
+						duration: 0.7,
+						stagger: 0.15,
+						ease: "power3.out",
+						scrollTrigger: {
+							trigger: "#ceo",
+							start: "top 80%",
+							end: "top 20%",
+							scrub: 2,
+						},
+					}
+				);
+			});
+		</script>
+	</body>
+</html>

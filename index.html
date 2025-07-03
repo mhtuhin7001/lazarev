@@ -187,7 +187,7 @@
 		<!-- Hero -->
 		<section
 			id="hero-home"
-			class="h-dvh flex flex-col text-center text-white bg-onyx p-(--sectionGap) justify-center items-center"
+			class="min-h-dvh flex flex-col text-center text-white bg-onyx p-(--sectionGap) justify-center items-center"
 		>
 			<h1
 				id="hero-title"
@@ -234,37 +234,37 @@
 					<img
 						src="assets/image/partner-1.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 					<img
 						src="assets/image/partner-2.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 					<img
 						src="assets/image/partner-3.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 					<img
 						src="assets/image/partner-4.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 					<img
 						src="assets/image/partner-5.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 					<img
 						src="assets/image/partner-6.svg"
 						class="h-4"
-						alt="Partner Logo"
+						alt="Client Logo"
 						loading="lazy"
 					/>
 				</div>
@@ -1999,25 +1999,6 @@
 
 		<!-- Home Script -->
 		<script>
-			// Advertise on Hover Play Video
-			document.addEventListener("DOMContentLoaded", () => {
-				const advBox = document.querySelectorAll(
-					"#advertise .advertise-box"
-				);
-				advBox.forEach(function (box) {
-					const video = box.querySelector("video");
-					box.addEventListener("mouseenter", function () {
-						video.play();
-						video.style.opacity = 1;
-					});
-					box.addEventListener("mouseleave", function () {
-						video.pause();
-						video.currentTime = 0;
-						video.style.opacity = 0;
-					});
-				});
-			});
-
 			// Partners Image Clone
 			document.addEventListener("DOMContentLoaded", () => {
 				const wrapper = document.getElementById("partners");
@@ -2086,6 +2067,25 @@
 							});
 						});
 					});
+			});
+
+			// Advertise on Hover Play Video
+			document.addEventListener("DOMContentLoaded", () => {
+				const advBox = document.querySelectorAll(
+					"#advertise .advertise-box"
+				);
+				advBox.forEach(function (box) {
+					const video = box.querySelector("video");
+					box.addEventListener("mouseenter", function () {
+						video.play();
+						video.style.opacity = 1;
+					});
+					box.addEventListener("mouseleave", function () {
+						video.pause();
+						video.currentTime = 0;
+						video.style.opacity = 0;
+					});
+				});
 			});
 
 			// Design Process
