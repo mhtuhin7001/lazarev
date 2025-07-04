@@ -221,153 +221,253 @@
 		<!-- Featured News -->
 		<section
 			id="featured-news"
-			class="text-white bg-onyx p-(--sectionGap) lg:flex lg:justify-between"
+			class="text-white bg-onyx p-(--sectionGap) lg:grid lg:grid-cols-3 lg:grid-rows-5 lg:gap-x-(--sectionGap)"
 		>
 			<div
-				class="sm:flex sm:flex-wrap sm:items-center sm:gap-4 lg:basis-3/5"
+				class="news-box flex my-3 gap-3 first:flex-col first:mb-6 first:lg:col-start-1 first:lg:col-end-3 first:lg:row-start-1 first:lg:row-end-6"
 			>
-				<a href="news-detail.html" class="sm:basis-full sm:h-fit">
+				<a href="news-detail.html" class="basis-1/4">
 					<img
 						src="assets/image/news-banner-3.jpg"
 						class="size-full object-cover"
 						alt="News Banner"
 						loading="lazy"
 					/>
-					<h2 class="font-semibold mt-4">
-						Lazarev Becomes A Professional Webflow Partner
-					</h2>
 				</a>
 				<div
-					class="text-sm my-4 sm:basis-1/3 sm:order-3 sm:my-0 sm:ms-auto"
+					class="relative basis-3/4 flex flex-wrap gap-3 border-t-1 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
 				>
-					<a
-						href="catnews"
-						class="inline-block border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
-						>Article</a
-					>
-					<span class="opacity-60"> 4 min read </span>
-				</div>
-				<a
-					href="author.html"
-					class="inline-flex w-full h-16 text-sm p-1.5 items-center border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5 xl:basis-96"
-				>
-					<img
-						src="assets/image/client-3.jpg"
-						class="size-12 me-2.5 object-cover rounded-full"
-						alt="Author Avatar"
-						loading="lazy"
-					/>
-					<div>
-						<span>Hasibul Islam Tuhin</span>
-						<span class="block opacity-60">CEO & Co-Founder</span>
-					</div>
-					<span class="ms-auto">June 29, 2025</span>
-				</a>
-			</div>
-			<div class="lg:basis-1/3">
-				<div class="flex mt-2.5 py-2 gap-3 lg:first:mt-0 lg:first:pt-0">
-					<a href="news-detail.html" class="basis-1/4">
-						<img
-							src="assets/image/news-banner-1.jpg"
-							class="size-full object-cover"
-							alt="News Banner"
-							loading="lazy"
-						/>
+					<a href="news-detail.html" class="basis-full mt-3 mb-auto">
+						<h6>Lazarev Becomes A Professional Webflow Partner</h6>
 					</a>
 					<div
-						class="relative flex flex-wrap basis-3/4 py-2 border-t-1 justify-between items-center gap-2 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
+						class="basis-full flex text-sm justify-between items-center"
 					>
-						<a href="news-detail.html" class="basis-full"
-							><h6>
-								How to Design an AI InterFace User will Trust in
-								2024?
-							</h6></a
-						>
 						<a
 							href="catnews"
-							class="inline-block text-sm border-1 border-iridium px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
-							>News</a
-						>
-						<span class="text-sm opacity-60">5 min read</span>
-					</div>
-				</div>
-				<div class="flex mt-2.5 py-2 gap-3 lg:first:mt-0 lg:first:pt-0">
-					<a href="news-detail.html" class="basis-1/4">
-						<img
-							src="assets/image/news-banner-2.jpg"
-							class="size-full object-cover"
-							alt="News Banner"
-							loading="lazy"
-						/>
-					</a>
-					<div
-						class="relative flex flex-wrap basis-3/4 py-2 border-t-1 justify-between items-center gap-2 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
-					>
-						<a href="news-detail.html" class="basis-full"
-							><h6>
-								How AI Influences Design and The Reciprocal
-								Impact of UX on AI-Driven Products
-							</h6></a
-						>
-						<a
-							href="catnews"
-							class="inline-block text-sm border-1 border-iridium px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
-							>Atricle</a
-						>
-						<span class="text-sm opacity-60">8 min read</span>
-					</div>
-				</div>
-				<div class="flex mt-2.5 py-2 gap-3 lg:first:mt-0 lg:first:pt-0">
-					<a href="news-detail.html" class="basis-1/4">
-						<img
-							src="assets/image/news-banner-4.jpg"
-							class="size-full object-cover"
-							alt="News Banner"
-							loading="lazy"
-						/>
-					</a>
-					<div
-						class="relative flex flex-wrap basis-3/4 py-2 border-t-1 justify-between items-center gap-2 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
-					>
-						<a href="news-detail.html" class="basis-full"
-							><h6>
-								AI-Based Industial Software Canvass AI Secures
-								$7.5M in Funding
-							</h6></a
-						>
-						<a
-							href="catnews"
-							class="inline-block text-sm border-1 border-iridium px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
-							>News</a
-						>
-						<span class="text-sm opacity-60">6 min read</span>
-					</div>
-				</div>
-				<div class="flex mt-2.5 py-2 gap-3 lg:first:mt-0 lg:first:pt-0">
-					<a href="news-detail.html" class="basis-1/4">
-						<img
-							src="assets/image/news-banner-5.jpg"
-							class="size-full object-cover"
-							alt="News Banner"
-							loading="lazy"
-						/>
-					</a>
-					<div
-						class="relative flex flex-wrap basis-3/4 py-2 border-t-1 justify-between items-center gap-2 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
-					>
-						<a href="news-detail.html" class="basis-full"
-							><h6>
-								AI Product Design in 2025: Tools & Strategies
-								for Business Leaders
-							</h6></a
-						>
-						<a
-							href="catnews"
-							class="inline-block text-sm border-1 border-iridium px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+							class="border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
 							>Article</a
 						>
-						<span class="text-sm opacity-60">4 min read</span>
+						<span class="opacity-60"> 4 min read </span>
 					</div>
+					<a
+						href="author.html"
+						class="news-author hidden basis-full h-16 text-sm p-1.5 border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5"
+					>
+						<img
+							src="assets/image/client-3.jpg"
+							class="size-12 me-2.5 object-cover rounded-full"
+							alt="Author Avatar"
+							loading="lazy"
+						/>
+						<div>
+							<span>Hasibul Islam Tuhin</span>
+							<span class="block opacity-60"
+								>CEO & Co-Founder</span
+							>
+						</div>
+						<span class="ms-auto">June 29, 2025</span>
+					</a>
+				</div>
+			</div>
+			<div
+				class="news-box flex my-3 gap-3 first:flex-col first:mb-6 first:lg:col-start-1 first:lg:col-end-3 first:lg:row-start-1 first:lg:row-end-6"
+			>
+				<a href="news-detail.html" class="basis-1/4">
+					<img
+						src="assets/image/news-banner-1.jpg"
+						class="size-full object-cover"
+						alt="News Banner"
+						loading="lazy"
+					/>
+				</a>
+				<div
+					class="relative basis-3/4 flex flex-wrap gap-3 border-t-1 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
+				>
+					<a href="news-detail.html" class="basis-full mt-3 mb-auto">
+						<h6>
+							How to Design an AI InterFace User will Trust in
+							2024?
+						</h6>
+					</a>
+					<div
+						class="basis-full flex text-sm justify-between items-center"
+					>
+						<a
+							href="catnews"
+							class="border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+							>Article</a
+						>
+						<span class="opacity-60"> 5 min read </span>
+					</div>
+					<a
+						href="author.html"
+						class="news-author hidden basis-full h-16 text-sm p-1.5 border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5"
+					>
+						<img
+							src="assets/image/news-banner-1.jpg"
+							class="size-12 me-2.5 object-cover rounded-full"
+							alt="Author Avatar"
+							loading="lazy"
+						/>
+						<div>
+							<span>Hasibul Islam Tuhin</span>
+							<span class="block opacity-60"
+								>CEO & Co-Founder</span
+							>
+						</div>
+						<span class="ms-auto">June 29, 2025</span>
+					</a>
+				</div>
+			</div>
+			<div
+				class="news-box flex my-3 gap-3 first:flex-col first:mb-6 first:lg:col-start-1 first:lg:col-end-3 first:lg:row-start-1 first:lg:row-end-6"
+			>
+				<a href="news-detail.html" class="basis-1/4">
+					<img
+						src="assets/image/news-banner-2.jpg"
+						class="size-full object-cover"
+						alt="News Banner"
+						loading="lazy"
+					/>
+				</a>
+				<div
+					class="relative basis-3/4 flex flex-wrap gap-3 border-t-1 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
+				>
+					<a href="news-detail.html" class="basis-full mt-3 mb-auto">
+						<h6>
+							How AI Influences Design and The Reciprocal Impact
+							of UX on AI-Driven Products
+						</h6>
+					</a>
+					<div
+						class="basis-full flex text-sm justify-between items-center"
+					>
+						<a
+							href="catnews"
+							class="border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+							>News</a
+						>
+						<span class="opacity-60"> 8 min read </span>
+					</div>
+					<a
+						href="author.html"
+						class="news-author hidden basis-full h-16 text-sm p-1.5 border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5"
+					>
+						<img
+							src="assets/image/client-3.jpg"
+							class="size-12 me-2.5 object-cover rounded-full"
+							alt="Author Avatar"
+							loading="lazy"
+						/>
+						<div>
+							<span>Hasibul Islam Tuhin</span>
+							<span class="block opacity-60"
+								>CEO & Co-Founder</span
+							>
+						</div>
+						<span class="ms-auto">June 29, 2025</span>
+					</a>
+				</div>
+			</div>
+			<div
+				class="news-box flex my-3 gap-3 first:flex-col first:mb-6 first:lg:col-start-1 first:lg:col-end-3 first:lg:row-start-1 first:lg:row-end-6"
+			>
+				<a href="news-detail.html" class="basis-1/4">
+					<img
+						src="assets/image/news-banner-4.jpg"
+						class="size-full object-cover"
+						alt="News Banner"
+						loading="lazy"
+					/>
+				</a>
+				<div
+					class="relative basis-3/4 flex flex-wrap gap-3 border-t-1 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
+				>
+					<a href="news-detail.html" class="basis-full mt-3 mb-auto">
+						<h6>
+							AI-Based Industial Software Canvass AI Secures $7.5M
+							in Funding
+						</h6>
+					</a>
+					<div
+						class="basis-full flex text-sm justify-between items-center"
+					>
+						<a
+							href="catnews"
+							class="border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+							>News</a
+						>
+						<span class="opacity-60"> 5 min read </span>
+					</div>
+					<a
+						href="author.html"
+						class="news-author hidden basis-full h-16 text-sm p-1.5 border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5"
+					>
+						<img
+							src="assets/image/client-3.jpg"
+							class="size-12 me-2.5 object-cover rounded-full"
+							alt="Author Avatar"
+							loading="lazy"
+						/>
+						<div>
+							<span>Hasibul Islam Tuhin</span>
+							<span class="block opacity-60"
+								>CEO & Co-Founder</span
+							>
+						</div>
+						<span class="ms-auto">June 29, 2025</span>
+					</a>
+				</div>
+			</div>
+			<div
+				class="news-box flex my-3 gap-3 first:flex-col first:mb-6 first:lg:col-start-1 first:lg:col-end-3 first:lg:row-start-1 first:lg:row-end-6"
+			>
+				<a href="news-detail.html" class="basis-1/4">
+					<img
+						src="assets/image/news-banner-5.jpg"
+						class="size-full object-cover"
+						alt="News Banner"
+						loading="lazy"
+					/>
+				</a>
+				<div
+					class="relative basis-3/4 flex flex-wrap gap-3 border-t-1 border-t-iridium before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:top-0 before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-600 before:ease-[cubic-bezier(0.85,0,0.15,1)] hover:before:scale-x-100 hover:before:origin-left"
+				>
+					<a href="news-detail.html" class="basis-full mt-3 mb-auto">
+						<h6>
+							AI Product Design in 2025: Tools & Strategies for
+							Business Leaders
+						</h6>
+					</a>
+					<div
+						class="basis-full flex text-sm justify-between items-center"
+					>
+						<a
+							href="catnews"
+							class="border-1 border-iridium me-4 px-3 py-0.5 rounded-full transition-colors duration-300 hover:text-onyx hover:bg-white"
+							>Article</a
+						>
+						<span class="opacity-60"> 6 min read </span>
+					</div>
+					<a
+						href="author.html"
+						class="news-author hidden basis-full h-16 text-sm p-1.5 border-1 border-iridium rounded-full transition-colors duration-300 hover:bg-shamrockGreen sm:basis-1/2 sm:px-2.5"
+					>
+						<img
+							src="assets/image/client-3.jpg"
+							class="size-12 me-2.5 object-cover rounded-full"
+							alt="Author Avatar"
+							loading="lazy"
+						/>
+						<div>
+							<span>Hasibul Islam Tuhin</span>
+							<span class="block opacity-60"
+								>CEO & Co-Founder</span
+							>
+						</div>
+						<span class="ms-auto">June 29, 2025</span>
+					</a>
 				</div>
 			</div>
 		</section>

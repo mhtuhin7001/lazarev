@@ -131,14 +131,14 @@ nav.pagination a.next {
 }
 
 /* Hero Home */
-#hero-home p .lineParent {
-	@apply mx-auto;
-}
 #hero-home #hero-title span {
 	@apply inline-flex items-center whitespace-nowrap;
 }
 #hero-home #hero-title span svg {
 	@apply inline-block size-[clamp(1.75rem,calc(5vw+1rem),9.5rem)] bg-shamrockGreen rounded-full;
+}
+#hero-home p .lineParent {
+	@apply mx-auto;
 }
 #hero-home p span {
 	@apply inline-block mt-0.5 px-2 py-1 border-1 border-iridium rounded-full;
@@ -179,6 +179,37 @@ nav.pagination a.next {
 	counter-increment: customList;
 }
 
+/* Awards */
+#awards .award-circle {
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	background: linear-gradient(to left, #3d3d3d, #3d3d3d, #fff 80%, #fff);
+}
+#awards .award-box:first-child .award-circle {
+	background: linear-gradient(to left, #4f5bff, #4f5bff, #fff 80%, #fff);
+}
+#awards .award-box:nth-child(2) .award-circle {
+	background: linear-gradient(to left, #0da34e, #0da34e, #fff 80%, #fff);
+}
+
+/* Featured News */
+#featured-news .news-box:first-child div:has(div) {
+	@apply border-t-0 before:hidden sm:gap-6;
+}
+#featured-news .news-box:first-child a:has(img) {
+	@apply basis-full;
+}
+#featured-news .news-box:first-child h6 {
+	@apply text-[clamp(1.5rem,calc(2.5vw+1rem),5.25rem)] leading-[clamp(1.65rem,calc(2.5vw+1rem),5rem)] font-semibold -mt-3;
+}
+#featured-news .news-box:first-child div:has(a) {
+	@apply ms-auto justify-start sm:basis-1/4 sm:order-3;
+}
+#featured-news .news-box:first-child .news-author {
+	@apply inline-flex items-center sm:basis-96;
+}
+
 /* News & Articles */
 #news-articles nav.pagination {
 	@apply bg-zinc-200;
@@ -198,20 +229,6 @@ nav.pagination a.next {
 #news-details #news-content p,
 #news-details #news-content ul {
 	@apply mt-6 lg:me-[30%];
-}
-
-/* Awards */
-#awards .award-circle {
-	-webkit-mask: linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	mask-composite: exclude;
-	background: linear-gradient(to left, #3d3d3d, #3d3d3d, #fff 80%, #fff);
-}
-#awards .award-box:first-child .award-circle {
-	background: linear-gradient(to left, #4f5bff, #4f5bff, #fff 80%, #fff);
-}
-#awards .award-box:nth-child(2) .award-circle {
-	background: linear-gradient(to left, #0da34e, #0da34e, #fff 80%, #fff);
 }
 
 /* Font Face */
