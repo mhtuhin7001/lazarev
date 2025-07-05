@@ -193,6 +193,12 @@ nav.pagination a.next {
 	background: linear-gradient(to left, #0da34e, #0da34e, #fff 80%, #fff);
 }
 
+/* Career */
+#career .job-describe p,
+#career .job-describe ul {
+	@apply mt-1 mb-4;
+}
+
 /* Featured News */
 #featured-news .news-box:first-child div:has(div) {
 	@apply border-t-0 before:hidden sm:gap-6;
