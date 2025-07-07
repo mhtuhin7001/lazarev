@@ -187,11 +187,11 @@
 		<!-- Hero -->
 		<section
 			id="hero-home"
-			class="min-h-dvh flex flex-col text-center text-white bg-onyx p-(--sectionGap) justify-center items-center"
+			class="text-center text-white bg-onyx p-(--sectionGap)"
 		>
 			<h1
 				id="hero-title"
-				class="uppercase text-hero! leading-(--heroTexlLeading)! font-bold mt-(--sectionGap)"
+				class="uppercase text-hero! leading-(--heroTexlLeading)! font-bold mt-14 lg:mt-(--sectionGap)"
 			>
 				AI & ML
 				<span>
@@ -222,7 +222,7 @@
 			</p>
 			<div
 				id="partners"
-				class="justify-self-end overflow-hidden relative mt-(--sectionGap) whitespace-nowrap before:content-[''] before:absolute before:w-1/3 before:h-full before:bg-gradient-to-l before:from-transparent before:to-onyx before:z-10 before:left-0 after:content-[''] after:absolute after:w-1/3 after:h-full after:bg-gradient-to-r after:from-transparent after:to-onyx after:z-10 after:right-0 md:w-[50%]"
+				class="overflow-hidden relative mx-auto mt-14 whitespace-nowrap before:content-[''] before:absolute before:w-1/3 before:h-full before:bg-gradient-to-l before:from-transparent before:to-onyx before:z-10 before:left-0 after:content-[''] after:absolute after:w-1/3 after:h-full after:bg-gradient-to-r after:from-transparent after:to-onyx after:z-10 after:right-0 md:w-[50%] lg:mt-(--sectionGap)"
 			>
 				<div
 					class="partner-logos inline-flex items-center gap-5 me-5 animate-marquee"
@@ -760,46 +760,44 @@
 		<!-- Best -->
 		<section
 			id="best"
-			class="parallax grid min-h-dvh text-white bg-center bg-cover bg-no-repeat place-items-center lg:text-center"
+			class="parallax flex flex-col min-h-dvh text-white bg-white bg-center bg-cover bg-no-repeat p-(--sectionGap) justify-center items-center lg:text-center"
 			style="background-image: url(assets/image/best-bg.jpg)"
 		>
-			<div class="px-(--sectionGap)">
-				<h1
-					class="text-[clamp(1.5rem,calc(5.5vw+1rem),10rem)]! leading-[clamp(1rem,calc(4.5vw+1rem),8rem)]! font-semibold"
-				>
-					Golden Standard in UX + AI
-				</h1>
-				<h5 class="font-medium mt-4 mb-6 lg:mt-6 lg:mb-12">
-					Look, we’ve been designing AI experiences since 2017, and
-					we’re not just dabbling in it; <br />
-					we’re dominating. We’ve tackled Adtech, Salestech, Fintech,
-					Legaltech, Media — you name it. <br /><br />
-					Want to see how we do it?
-				</h5>
-				<a
-					id="animated-btn"
-					href="service.html"
-					class="inline-flex w-full uppercase text-sm font-semibold text-black bg-white py-4 justify-center items-center gap-3 rounded-full sm:w-1/2 lg:w-1/3"
-				>
-					<div class="relative leading-3.5 tracking-tight">
-						<span id="default-text">
-							Check our UX + AI innovations here
-						</span>
-						<span id="hover-text" class="absolute inset-0">
-							Check our UX + AI innovations here
-						</span>
-					</div>
-					<svg viewBox="-2 -2 24 24" fill="none" class="size-5">
-						<path
-							data-morph="end"
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
-							fill="currentcolor"
-						></path>
-					</svg>
-				</a>
-			</div>
+			<h1
+				class="text-[clamp(1.5rem,calc(5.5vw+1rem),10rem)]! leading-[clamp(1rem,calc(4.5vw+1rem),8rem)]! font-semibold"
+			>
+				Golden Standard in UX + AI
+			</h1>
+			<h5 class="font-medium mt-4 mb-6 lg:mt-6 lg:mb-12">
+				Look, we’ve been designing AI experiences since 2017, and we’re
+				not just dabbling in it; <br />
+				we’re dominating. We’ve tackled Adtech, Salestech, Fintech,
+				Legaltech, Media — you name it. <br /><br />
+				Want to see how we do it?
+			</h5>
+			<a
+				id="animated-btn"
+				href="service.html"
+				class="inline-flex w-full uppercase text-sm font-semibold text-black bg-white py-4 justify-center items-center gap-3 rounded-full sm:w-1/2 lg:w-1/3"
+			>
+				<div class="relative leading-3.5 tracking-tight">
+					<span id="default-text">
+						Check our UX + AI innovations here
+					</span>
+					<span id="hover-text" class="absolute inset-0">
+						Check our UX + AI innovations here
+					</span>
+				</div>
+				<svg viewBox="-2 -2 24 24" fill="none" class="size-5">
+					<path
+						data-morph="end"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+						fill="currentcolor"
+					></path>
+				</svg>
+			</a>
 		</section>
 
 		<!-- Success Stories -->
@@ -1181,7 +1179,7 @@
 			>
 				<div
 					id="projects-filter"
-					class="sticky overflow-hidden flex flex-col h-11 bg-eerieBlack px-4 py-3 gap-4 rounded-4xl top-14 z-20 xl:basis-1/4 xl:h-full xl:bg-transparent xl:p-0 xl:rounded-none xl:top-20"
+					class="sticky overflow-hidden flex flex-col h-11 bg-eerieBlack px-4 py-3 gap-4 rounded-4xl cursor-pointer top-14 z-20 xl:basis-1/4 xl:h-full xl:bg-transparent xl:p-0 xl:rounded-none xl:top-20"
 				>
 					<span
 						class="flex uppercase text-sm justify-between items-center xl:hidden"
@@ -1258,7 +1256,7 @@
 					<a
 						href="case-detail.html"
 						data-category="ai"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							How Rhea AI by Accern Redefined Financial Research
@@ -1273,7 +1271,7 @@
 					<a
 						href="case-detail.html"
 						data-category="ai"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Pika AI Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1291,7 +1289,7 @@
 					<a
 						href="case-detail.html"
 						data-category="fintech"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Payoneer Design Case Study
@@ -1310,7 +1308,7 @@
 					<a
 						href="case-detail.html"
 						data-category="fintech"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Tratta Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1328,7 +1326,7 @@
 					<a
 						href="case-detail.html"
 						data-category="fintech"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Vessel Finance Design Case Study
@@ -1348,7 +1346,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							AfroTech Design Case Study
@@ -1367,7 +1365,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Matta Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1384,7 +1382,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">NODO Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1401,7 +1399,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Prytula Foundation Design Case Study
@@ -1421,7 +1419,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Riviera City Design Case Study
@@ -1442,7 +1440,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Teachchain Design Case Study
@@ -1463,7 +1461,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Ukrainian Power Design Case Study
@@ -1483,7 +1481,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Riptide Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1502,7 +1500,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Rentcredit Design Case Study
@@ -1521,7 +1519,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Redbrain Design Case Study
@@ -1541,7 +1539,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							11 Sight Design Case Study
@@ -1561,7 +1559,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Activote Design Case Study
@@ -1582,7 +1580,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Mozayix Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1600,7 +1598,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Mappn Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1617,7 +1615,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">Retasks Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1636,7 +1634,7 @@
 					<a
 						href="case-detail.html"
 						data-category="others"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">GoPingu Design Case Study</h4>
 						<p class="mt-3 mb-8 opacity-60">
@@ -1653,7 +1651,7 @@
 					<a
 						href="case-detail.html"
 						data-category="web3"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Blockbeat Design Case Study
@@ -1672,7 +1670,7 @@
 					<a
 						href="case-detail.html"
 						data-category="web3"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							Metastaq Design Case Study
@@ -1692,7 +1690,7 @@
 					<a
 						href="case-detail.html"
 						data-category="web3"
-						class="project group mt-8"
+						class="project group inline-block mt-8 md:mt-0"
 					>
 						<h4 class="font-semibold">
 							CollectorCrypt Design Case Study
@@ -1818,7 +1816,7 @@
 		<!-- Jump to -->
 		<section
 			id="jump-to"
-			class="parallax text-white bg-center bg-cover bg-no-repeat p-(--sectionGap) lg:h-[90dvh]"
+			class="parallax text-white bg-onyx bg-center bg-cover bg-no-repeat p-(--sectionGap) lg:h-[90dvh]"
 			style="background-image: url(assets/image/jump-to-bg.jpg)"
 		>
 			<a
