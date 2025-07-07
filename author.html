@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Career - LAZAREV</title>
+		<link
+			rel="shortcut icon"
+			href="assets/image/favicon.gif"
+			type="image/x-icon"
+		/>
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/input.css" />
+	</head>
+	<body class="overflow-hidden font-gilroy">
+		<!-- Loader -->
+		<section id="loader" class="fixed size-full bg-white inset-0 z-100">
+			<div
+				id="loader-path"
+				class="overflow-hidden absolute w-1/3 h-4 bg-onyx mx-auto rounded-2xl inset-x-0 bottom-1/4 z-101"
+			>
+				<div
+					id="loader-bar"
+					class="absolute w-1/2 h-4 bg-shamrockGreen rounded-2xl transition-transform duration-300 ease-in animate-loading"
+				></div>
+			</div>
+		</section>
+
+		<!-- Header -->
+		<header class="text-white">
+			<!-- Header Strip -->
+			<div
+				id="header-strip"
+				class="fixed w-full uppercase flex items-center bg-onyx px-(--sectionGap) py-2.5 top-0 z-50 xl:py-5"
+			>
+				<a href="index.html" class="uppercase font-semibold me-auto">
+					<img
+						src="assets/image/logo.svg"
+						class="h-5"
+						alt="Site Logo"
+						loading="lazy"
+					/>
+					<span class="hidden font-bold text-4xl">Lazarev.</span>
+				</a>
+				<a
+					href="contact.html"
+					class="group relative p-1.5 xl:px-0 xl:py-1.5"
+				>
+					<div
+						class="flex gap-4 items-center after:content-[''] after:absolute after:size-full after:bg-shamrockGreen after:rounded-full after:top-0 after:right-0 after:transition-all after:duration-300 after:-z-1 xl:group-hover:after:w-10"
+					>
+						<span
+							class="hidden font-medium ms-3.5 whitespace-nowrap transition-all duration-300 group-hover:text-shamrockGreen xl:inline-block"
+							>Let's Talk</span
+						>
+						<svg
+							viewBox="-2 -2 24 24"
+							fill="none"
+							class="size-5 xl:me-2.5"
+						>
+							<path
+								class="group-hover:hidden"
+								data-morph="start"
+								d="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+								fill="currentcolor"
+								data-original="M2 14.8767V18.0017H5.125L14.342 8.7847L11.217 5.6597L2 14.8767ZM16.758 6.3687C16.8353 6.29161 16.8965 6.20003 16.9384 6.09922C16.9802 5.99841 17.0017 5.89034 17.0017 5.7812C17.0017 5.67206 16.9802 5.56399 16.9384 5.46318C16.8965 5.36237 16.8353 5.2708 16.758 5.1937L14.808 3.2437C14.7309 3.16645 14.6393 3.10516 14.5385 3.06334C14.4377 3.02152 14.3296 3 14.2205 3C14.1114 3 14.0033 3.02152 13.9025 3.06334C13.8017 3.10516 13.7101 3.16645 13.633 3.2437L12.108 4.7687L15.233 7.8937L16.758 6.3687Z"
+							></path>
+							<path
+								class="hidden group-hover:inline-block"
+								data-morph="end"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.6254 5.56286H2.90643V3H17V17.0946H14.4371V7.37464L3.81179 18L2 16.1893L12.6254 5.56286Z"
+								fill="currentcolor"
+							></path>
+						</svg>
+					</div>
+				</a>
+				<button
+					id="menu-btn"
+					onclick="menuBtnToggle(this)"
+					class="flex flex-col size-8 bg-iridium ms-1.5 gap-1 justify-center items-center rounded-full cursor-pointer xl:hidden"
+				>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+					<span
+						class="w-4 h-px bg-white transition-all duration-300"
+					></span>
+				</button>
+			</div>
+			<!-- Main Menu  -->
+			<nav
+				id="main-menu"
+				class="overflow-y-scroll fixed h-full bg-onyx px-(--sectionGap) top-0 inset-x-0 -translate-y-full z-49 xl:overflow-y-hidden xl:size-fit xl:bg-transparent xl:mx-auto xl:translate-0 xl:pointer-events-none xl:z-50"
+			>
+				<ul class="h-fit pt-14 xl:flex xl:gap-5 xl:mt-0.5 xl:py-6">
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Case Studies</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="cases.html">Our Case Studies</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Areas of Expertise</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">🔥AI & ML</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">FinTech</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Real Estate</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">W-commerce</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">UI UX Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">UX Audit</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UX Design</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">UI Research</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">Product Design</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="service.html">SaaS</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Web App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Mobile App</a>
+							</li>
+							<li class="menu-item">
+								<a href="service.html">Website Design</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item menu-item-has-children">
+						<a href="javascript:void(0)">About Agency</a>
+						<ul class="sub-menu">
+							<li class="menu-item">
+								<a href="about.html">About Us</a>
+							</li>
+							<li class="menu-item">
+								<a href="testimonials.html"
+									>Client's Feedback</a
+								>
+							</li>
+							<li class="menu-item current-menu-item">
+								<a href="career.html">Careers</a>
+							</li>
+							<li class="menu-item">
+								<a href="news.html">News & Articles</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div
+				id="menu-bg"
+				class="fixed w-full bg-onyx top-0 z-49 after:content-[''] after:absolute after:h-px after:bg-white after:mx-(--sectionGap) after:-bottom-px after:left-0 after:right-0 xl:inline-block"
+			></div>
+		</header>
+
+		<!-- Hero -->
+		<section id="hero" class="text-white bg-onyx p-(--sectionGap)">
+			<ul
+				class="flex flex-wrap text-sm tracking-tight font-medium mt-14 items-center gap-1.5 lg:mt-(--sectionGap)"
+			>
+				<li class="flex items-center gap-1.5">
+					<a href="index.html">Home</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="flex items-center gap-1.5">
+					<a href="news.html"> News & Articles </a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-3.5"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</li>
+				<li class="opacity-60">Hasibul Islam Tuhin</li>
+			</ul>
+			<div
+				class="mt-8 pb-(--sectionGap) md:flex md:flex-wrap md:justify-between md:items-center md:gap-y-10"
+			>
+				<div class="md:basis-1/6">
+					<img
+						src="assets/image/client-3.jpg"
+						class="size-30 rounded-full object-cover"
+						alt="Author Avatar"
+						loading="lazy"
+					/>
+				</div>
+				<h1 class="font-semibold mt-3 md:basis-3/4 md:mt-0">
+					Hasibul Islam Tuhin
+				</h1>
+				<div
+					class="mt-3 md:basis-3/4 md:flex md:order-4 md:mt-0 md:gap-10"
+				>
+					<div>
+						<span class="text-sm opacity-60">Role</span>
+						<h5>CEO & Founder</h5>
+					</div>
+					<div>
+						<span class="text-sm opacity-60">Since</span>
+						<h5>2015</h5>
+					</div>
+				</div>
+				<div class="mt-3 md:basis-1/6 md:mt-0">
+					<span class="text-sm opacity-60">Social</span>
+					<div>
+						<a
+							href="https://www.linkedin.com/in/mhtuhin7001/"
+							class="inline-grid size-8 bg-iridium ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 93.06 93.06"
+								stroke="currentColor"
+								class="size-3.5 fill-white"
+							>
+								<g>
+									<g>
+										<path
+											d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184
+        c6.166,0,11.176-5.011,11.176-11.184C22.362,5.091,17.351,0.08,11.185,0.08z"
+										></path>
+										<rect
+											x="1.538"
+											y="30.926"
+											width="19.287"
+											height="62.054"
+										></rect>
+										<path
+											d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921v62.053h19.27V62.281
+        c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942
+        C93.06,42.235,89.455,29.383,69.925,29.383z"
+										></path>
+									</g>
+								</g>
+							</svg>
+						</a>
+						<a
+							href="https://x.com/mhtuhin7001"
+							class="inline-grid size-8 bg-iridium ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								viewBox="0 0 300 300.251"
+								xmlns="http://www.w3.org/2000/svg"
+								version="1.1"
+								stroke="currentColor"
+								class="size-3.5 fill-white"
+							>
+								<path
+									d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"
+								></path>
+							</svg>
+						</a>
+						<a
+							href="https://www.facebook.com/mhtuhin7001/"
+							class="inline-grid size-8 bg-iridium ms-1 place-items-center rounded-full"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="-5 0 20 20"
+								stroke="currentColor"
+								class="size-3.5 fill-white"
+							>
+								<path
+									d="M6.821 20v-9h2.732l.446-4H6.821v-1.948C6.821 4.022 6.847 3 8.287 3h1.458V0.14C9.745.097 8.493 0 7.226 0 4.58 0 2.923 1.657 2.923 4.7V7H0v4h2.923v9h3.898z"
+								></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div
+				class="pt-(--sectionGap) border-t-1 border-t-iridium lg:flex lg:justify-between"
+			>
+				<span class="text-sm opacity-60 lg:basis-1/6">Biography</span>
+				<p class="lg:basis-3/4">
+					I'm Kirill Lazarev — Founder & CEO of Lazarev.agency, UI/UX
+					mentor, and a judge for top design award competitions
+					worldwide.
+					<br />
+					<br />
+					My journey in web design started in 2015. But I didn’t just
+					want to create "nice" interfaces — I set out to build
+					digital experiences that grow businesses.
+					<br />
+					<br />
+					I’m a proud Professional Member of AIGA, the largest design
+					community in the U.S. It’s more than just a badge — it’s a
+					responsibility. As a member, I shape the future of design by
+					helping select award winners, guiding strategic initiatives,
+					and mentoring designers to push the boundaries of
+					creativity.
+					<br />
+					<br />
+					I’m also part of the Art Directors Club of Europe (ADCE), a
+					non-profit uniting over 7,500 top creatives from 22
+					countries. Here, I work to raise the bar for European
+					creative communication, sharing insights, and contributing
+					to the industry’s growth. It’s about more than just design —
+					it’s about building connections that fuel creative
+					excellence.
+					<br />
+					<br />
+					On top of that, I’m a member of Club 100 — an exclusive
+					community of young entrepreneurs and CEOs shaping the future
+					of Ukrainian business. It’s not just networking; it’s about
+					driving real change. With only 100 members (all generating
+					$1M+ annually), we’re building the economy, connecting with
+					government officials, and launching social impact
+					initiatives that matter.
+					<br />
+					<br />
+					When it comes to design awards, I’m not here to participate
+					— I’m here to win. In just one year, I’ve secured 70+ design
+					accolades, including the prestigious Webby Awards, hailed as
+					the "Internet’s highest honor" on a global scale. My team
+					and I have also earned five Red Dot Awards, Europe’s most
+					renowned design recognition.
+					<br />
+					<br />
+					Our commitment to excellence isn’t a one-time thing — it’s a
+					promise we make every day to our clients, our team, and the
+					design world at large.
+				</p>
+			</div>
+		</section>
+
+		<!-- News & Articles -->
+		<section
+			id="news-articles"
+			class="flex flex-col text-black bg-white p-(--sectionGap) items-center gap-16"
+		>
+			<div
+				class="md:grid md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-8"
+			>
+				<div class="relative h-fit mt-6 md:mt-0">
+					<div class="absolute text-sm top-4 left-4">
+						<a
+							href="catnews"
+							class="inline-block bg-white px-3 py-0.5 rounded-full transition-colors duration-300 hover:bg-shamrockGreen"
+							>Article</a
+						>
+						<span
+							class="inline-block text-white bg-eerieBlack ms-4 px-3 py-0.5 rounded-full"
+							>5 min read</span
+						>
+					</div>
+					<a href="news-detail.html">
+						<img
+							src="assets/image/news-banner-1.jpg"
+							class="size-full mb-4 object-cover"
+							alt="News Banner"
+							loading="lazy"
+						/>
+						<h4>
+							How to Design an AI InterFace User will Trust in
+							2024?
+						</h4>
+					</a>
+				</div>
+				<div class="relative h-fit mt-6 md:mt-0">
+					<div class="absolute text-sm top-4 left-4">
+						<a
+							href="catnews"
+							class="inline-block bg-white px-3 py-0.5 rounded-full transition-colors duration-300 hover:bg-shamrockGreen"
+							>News</a
+						>
+						<span
+							class="inline-block text-white bg-eerieBlack ms-4 px-3 py-0.5 rounded-full"
+							>8 min read</span
+						>
+					</div>
+					<a href="news-detail.html">
+						<img
+							src="assets/image/news-banner-2.jpg"
+							class="size-full mb-4 object-cover"
+							alt="News Banner"
+							loading="lazy"
+						/>
+						<h4>
+							How AI Influences Design and The Reciprocal Impact
+							of UX on AI-Driven Products
+						</h4>
+					</a>
+				</div>
+				<div class="relative h-fit mt-6 md:mt-0">
+					<div class="absolute text-sm top-4 left-4">
+						<a
+							href="catnews"
+							class="inline-block bg-white px-3 py-0.5 rounded-full transition-colors duration-300 hover:bg-shamrockGreen"
+							>Article</a
+						>
+						<span
+							class="inline-block text-white bg-eerieBlack ms-4 px-3 py-0.5 rounded-full"
+							>4 min read</span
+						>
+					</div>
+					<a href="news-detail.html">
+						<img
+							src="assets/image/news-banner-3.jpg"
+							class="size-full mb-4 object-cover"
+							alt="News Banner"
+							loading="lazy"
+						/>
+						<h4>Lazarev Becomes A Professional Webflow Partner</h4>
+					</a>
+				</div>
+				<div class="relative h-fit mt-6 md:mt-0">
+					<div class="absolute text-sm top-4 left-4">
+						<a
+							href="catnews"
+							class="inline-block bg-white px-3 py-0.5 rounded-full transition-colors duration-300 hover:bg-shamrockGreen"
+							>News</a
+						>
+						<span
+							class="inline-block text-white bg-eerieBlack ms-4 px-3 py-0.5 rounded-full"
+							>5 min read</span
+						>
+					</div>
+					<a href="news-detail.html">
+						<img
+							src="assets/image/news-banner-4.jpg"
+							class="size-full mb-4 object-cover"
+							alt="News Banner"
+							loading="lazy"
+						/>
+						<h4>
+							AI-Based Industial Software Canvass AI Secures $7.5M
+							in Funding
+						</h4>
+					</a>
+				</div>
+				<div class="relative h-fit mt-6 md:mt-0">
+					<div class="absolute text-sm top-4 left-4">
+						<a
+							href="catnews"
+							class="inline-block bg-white px-3 py-0.5 rounded-full transition-colors duration-300 hover:bg-shamrockGreen"
+							>Article</a
+						>
+						<span
+							class="inline-block text-white bg-eerieBlack ms-4 px-3 py-0.5 rounded-full"
+							>6 min read</span
+						>
+					</div>
+					<a href="news-detail.html">
+						<img
+							src="assets/image/news-banner-5.jpg"
+							class="size-full mb-4 object-cover"
+							alt="News Banner"
+							loading="lazy"
+						/>
+						<h4>
+							AI Product Design in 2025: Tools & Strategies for
+							Business Leaders
+						</h4>
+					</a>
+				</div>
+			</div>
+			<nav class="navigation pagination" role="navigation">
+				<a class="prev page-numbers opacity-60" href="/page/1/">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="inline-block size-3"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 19.5 8.25 12l7.5-7.5"
+						/>
+					</svg>
+				</a>
+				<div class="page-numbers-box">
+					<span class="page-numbers current" href="/page/1/">1</span>
+					<a href="" class="page-numbers">2</a>
+					<a class="page-numbers" href="/page/3/">3</a>
+				</div>
+				<a class="next page-numbers" href="/page/3/">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="inline-block size-3"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</a>
+			</nav>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="text-white bg-onyx p-(--sectionGap) pb-7 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+		>
+			<h1 class="font-semibold sm:col-start-1 sm:col-end-3 lg:col-end-2">
+				The Agency <br />
+				for Impatient Brands®
+			</h1>
+			<div class="mt-7 lg:mt-4">
+				<h6 class="uppercase tracking-tight mb-2 opacity-60">
+					Quick Links
+				</h6>
+				<ul class="">
+					<li class="menu-item">
+						<a href="cases.html">Case Studies</a>
+					</li>
+					<li class="menu-item">
+						<a href="about.html">About Us</a>
+					</li>
+					<li class="menu-item">
+						<a href="testimonials.html">Client's Feedback</a>
+					</li>
+					<li class="menu-item">
+						<a href="career.html">Careers</a>
+					</li>
+					<li class="menu-item">
+						<a href="news.html">News & Article</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-7 lg:mt-4">
+				<div>
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Project in Mind?
+					</h6>
+					<a
+						href="mailto:hello@attalika.com"
+						class="relative inline-block mb-2 after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:-bottom-0.5 after:left-0 after:scale-x-0 after:origin-left after:transition-transform after:duration-600 after:ease-[cubic-bezier(0.85,0,0.15,1)] hover:after:scale-x-100 hover:after:origin-left"
+					>
+						<h6>contact@lazarev.com</h6>
+					</a>
+				</div>
+				<div class="mt-4">
+					<h6 class="uppercase tracking-tight mb-2 opacity-60">
+						Our Social
+					</h6>
+					<div class="grid grid-cols-2 gap-2.5 xl:grid-cols-3">
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Linkedin</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Facebook</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Instagram</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Dribble</a
+						>
+						<a
+							href=""
+							class="inline-grid uppercase text-sm font-medium py-1 place-items-center border-1 border-white rounded-2xl transition-all duration-300 hover:text-onyx hover:bg-white"
+							>Behance</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Lenis Script -->
+		<script src="js/lenis.min.js"></script>
+		<!-- GSAP Script -->
+		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger Script -->
+		<script src="js/ScrollTrigger.min.js"></script>
+		<!-- GSAP SplitText Script -->
+		<script src="js/SplitText.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
